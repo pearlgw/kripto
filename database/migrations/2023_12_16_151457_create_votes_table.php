@@ -16,7 +16,6 @@ return new class extends Migration
             $table->unsignedBigInteger('user_id')->unique();
             $table->unsignedBigInteger('candidate_id');
             $table->string('status');
-            $table->longText('integration');
             $table->timestamps();
 
             $table->foreign('user_id')->references('id')->on('users');
