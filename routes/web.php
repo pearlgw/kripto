@@ -47,7 +47,7 @@ Route::group(['middleware' => ['auth', 'checkrole:admin']], function() {
 
 // untuk pegawai
 Route::group(['middleware' => ['auth', 'checkrole:student']], function() {
-    Route::get('/student', [StudentController::class, 'index']);
+    // Route::get('/student', [StudentController::class, 'index']);
     Route::get('/home', [StudentController::class, 'index']);
     Route::get('/about', [StudentController::class, 'about']);
     Route::get('/cek-integrasi', [StudentController::class, 'pageIntegrasi']);
