@@ -36,14 +36,12 @@ Tampilan Dashboard Student
 Tampilan Dashboard Student
 ![tampilan pertama](laporan/12_detail_candidate_student.png)
 
-Tampilan Setelah Melakukan Vote
-Tampilan Dashboard Student
+Tampilan Setelah Melakukan Vote (Tampilan Dashboard Student)
 ![tampilan pertama](laporan/13_page_after_vote.png)
 
 Tampilan Dashboard Student
 ![tampilan pertama](laporan/14_cek_integrasi.png)
 
-Setelah Melakukan Pengecekan Integrasi Yang Di Kirim Dari Email
-Tampilan Dashboard Student
+Setelah Melakukan Pengecekan Integrasi Yang Di Kirim Dari Email( Tampilan Dashboard Student)
 ![tampilan pertama](laporan/15_sertifikat.png)
 
