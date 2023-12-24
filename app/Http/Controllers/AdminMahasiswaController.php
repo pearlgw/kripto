@@ -15,6 +15,7 @@ class AdminMahasiswaController extends Controller
     {
         return view('admin.mahasiswa.index', [
             'user' => auth()->user()->name,
+            'image' => auth()->user()->image,
             'users' => User::where('role', '!=', 'admin')->get()
         ]);
     }
@@ -25,7 +26,8 @@ class AdminMahasiswaController extends Controller
     public function create()
     {
         return view('admin.mahasiswa.create', [
-            'user' => auth()->user()->name
+            'image' => auth()->user()->image,
+            'user' => auth()->user()->name,
         ]);
     }
 
@@ -58,9 +60,14 @@ class AdminMahasiswaController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(string $id)
+    public function show($slug)
     {
-        //
+        return view('admin.mahasiswa.show', [
+            'users' => User::where('slug', $slug)->firstOrFail(),
+            'user' => auth()->user()->name,
+            'userr' => auth()->user(),
+            'image' => auth()->user()->image,
+        ]);
     }
 
     /**
@@ -70,7 +77,8 @@ class AdminMahasiswaController extends Controller
     {
         return view('admin.mahasiswa.edit', [
             'student' => User::where('slug', $slug)->first(),
-            'user' => auth()->user()->name
+            'user' => auth()->user()->name,
+            'image' => auth()->user()->image,
         ]);
     }
 
@@ -112,7 +120,7 @@ class AdminMahasiswaController extends Controller
         if ($mahasiswa->image) {
             Storage::delete($mahasiswa->image);
         }
-        
+
         return redirect('/mahasiswa')->with('success', 'Data Telah Dihapus');
     }
 }

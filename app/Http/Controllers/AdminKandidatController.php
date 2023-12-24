@@ -17,7 +17,9 @@ class AdminKandidatController extends Controller
     {
         return view('admin.kandidat.index', [
             'user' => auth()->user()->name,
-            'candidates' => Candidate::all()
+            'candidates' => Candidate::all(),
+            'image' => auth()->user()->image,
+            'userr' => auth()->user(),
         ]);
     }
 
@@ -28,7 +30,8 @@ class AdminKandidatController extends Controller
     {
         return view('admin.kandidat.create', [
             'user' => auth()->user()->name,
-            'students' => User::where('role', '!=', 'admin')->get()
+            'students' => User::where('role', '!=', 'admin')->get(),
+            'image' => auth()->user()->image,
         ]);
     }
 
@@ -38,6 +41,7 @@ class AdminKandidatController extends Controller
     public function store(Request $request)
     {
         $validatedData = $request->validate([
+            'status' => 'required',
             'user_id_ketua' => 'required',
             'user_id_wakil' => 'required',
             'visi' => 'required',
@@ -59,30 +63,37 @@ class AdminKandidatController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(string $id)
+    public function show($slug)
     {
-        //
+        return view('admin.kandidat.show', [
+            'candidate' => Candidate::where('slug', $slug)->firstOrFail(),
+            'user' => auth()->user()->name,
+            'userr' => auth()->user(),
+            'image' => auth()->user()->image,
+        ]);
     }
 
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(Candidate $kandidat)
+    public function edit($slug)
     {
         return view('admin.kandidat.edit', [
-            'kandidat' => $kandidat,
+            'kandidat' => Candidate::where('slug', $slug)->first(),
             'mahasiswa' => User::where('role', '!=', 'admin')->get(),
             'user' => auth()->user()->name,
+            'image' => auth()->user()->image,
         ]);
     }
 
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, string $id)
+    public function update(Request $request, string $slug)
     {
         // Validate the form data
         $validatedData = $request->validate([
+            'status' => 'required',
             'user_id_ketua' => ['required', Rule::exists('users', 'id')],
             'user_id_wakil' => ['required', Rule::exists('users', 'id')],
             'visi' => 'required',
@@ -91,19 +102,7 @@ class AdminKandidatController extends Controller
             'experience' => 'required',
         ]);
 
-        // Find the Candidate by ID
-        $candidate = Candidate::findOrFail($id);
-
-        // Update the Candidate with the validated data
-        $candidate->update([
-            'user_id_ketua' => $validatedData['user_id_ketua'],
-            'user_id_wakil' => $validatedData['user_id_wakil'],
-            'visi' => $validatedData['visi'],
-            'misi' => $validatedData['misi'],
-            'program_kerja' => $validatedData['program_kerja'],
-            'experience' => $validatedData['experience'],
-        ]);
-
+        Candidate::where('slug', $slug)->update($validatedData);
         // Redirect back with a success message
         return redirect('/kandidat')->with('success', 'Updated berhasil');
     }

@@ -4,10 +4,18 @@
     <div class="d-sm-flex align-items-center justify-content-between mb-4">
         <h1 class="h3 mb-0 text-gray-800">Form Edit Student</h1>
     </div>
-    <form action="/kandidat/{{ $kandidat->id }}" method="POST" enctype="multipart/form-data">
+    <form action="/kandidat/{{ $kandidat->slug }}" method="POST" enctype="multipart/form-data">
         @method('put')
         @csrf
-        <input type="hidden" name="id_kandidat" value="{{ $kandidat->id }}">
+        <div class="mb-3">
+            <label for="status" class="form-label">Status</label>
+            <input type="text" name="status" class="form-control @error('status') is-invalid @enderror" id="status" value="{{ old('status', $kandidat->status) }}">
+            @error('status')
+                <div class="invalid-feedback">
+                    {{ $message }}
+                </div>
+            @enderror
+        </div>
         <div class="mb-3">
             <label for="kandidat" class="form-label">Kandidat Ketua</label>
             <select class="form-control" id="kandidat" name="user_id_ketua" required>
@@ -68,3 +76,4 @@
     </form>
 
 @endsection
+

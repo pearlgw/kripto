@@ -30,24 +30,21 @@ Route::group(['middleware' => 'guest'], function() {
 
 });
 
-// untuk superadmin dan pegawai
 Route::group(['middleware' => ['auth', 'checkrole:admin,student']], function() {
     Route::post('/logout', [AuthController::class, 'logout']);
     Route::get('/redirect', [RedirectController::class, 'cek']);
 });
 
 
-// untuk superadmin
 Route::group(['middleware' => ['auth', 'checkrole:admin']], function() {
     Route::get('/admin', [AdminController::class, 'index']);
     Route::resource('/mahasiswa', AdminMahasiswaController::class);
-    Route::resource('/kandidat', AdminKandidatController::class);
-    Route::get('/total-suara', [TotalSuaraController::class, 'index']);
+    Route::resource('/kandidat', AdminKandidatController::class)->parameters(['kandidat' => 'slug']);
 });
 
-// untuk pegawai
 Route::group(['middleware' => ['auth', 'checkrole:student']], function() {
-    // Route::get('/student', [StudentController::class, 'index']);
+    Route::get('/student', [StudentController::class, 'index']);
+    Route::get('/student/{id}', [StudentController::class, 'show']);
     Route::get('/home', [StudentController::class, 'index']);
     Route::get('/about', [StudentController::class, 'about']);
     Route::get('/cek-integrasi', [StudentController::class, 'pageIntegrasi']);

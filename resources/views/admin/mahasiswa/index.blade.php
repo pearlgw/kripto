@@ -35,9 +35,16 @@
                             <td style="vertical-align: middle;">{{ $usr->email }}</td>
                             <td style="vertical-align: middle;">{{ $usr->phone_number }}</td>
                             <td style="vertical-align: middle;">{{ $usr->alamat }}</td>
-                            <td style="vertical-align: middle;"><img src="{{ asset('storage/' . $usr->image) }}" style="width: 50px"></td>
                             <td style="vertical-align: middle;">
-                                <a href="/mahasiswa/{{ $usr->slug }}/edit" class="badge bg-warning"><i class="fas fa-edit"></i></a>
+                                @if ($usr->image)
+                                    <img src="{{ asset('storage/' . $usr->image) }}" style="width: 50px" class="rounded-circle">
+                                @else
+                                    <img src="{{ asset('storage/default.jpg') }}" style="width: 50px" class="rounded-circle">
+                                @endif
+                            </td>
+                            <td style="vertical-align: middle;">
+                                <a href="/mahasiswa/{{ $usr->slug }}" class="badge bg-primary text-light"><i class="fas fa-eye"></i></a>
+                                <a href="/mahasiswa/{{ $usr->slug }}/edit" class="badge bg-warning text-dark"><i class="fas fa-edit"></i></a>
                                 <form action="/mahasiswa/{{ $usr->slug}}" method="POST" class="d-inline">
                                     @csrf
                                     @method('DELETE')

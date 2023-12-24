@@ -6,10 +6,11 @@ use App\Models\User;
 use App\Models\Vote;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Cviebrock\EloquentSluggable\Sluggable;
 
 class Candidate extends Model
 {
-    use HasFactory;
+    use HasFactory, Sluggable;
     protected $guarded = ['id'];
 
     public function ketua()
@@ -37,5 +38,19 @@ class Candidate extends Model
     public function getTotalVotes()
     {
         return $this->vote()->count();
+    }
+
+    public function sluggable(): array
+    {
+        return [
+            'slug' => [
+                'source' => 'status'
+            ]
+        ];
+    }
+
+    public function getRouteKeyName()
+    {
+        return 'slug';
     }
 }

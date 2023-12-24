@@ -5,22 +5,48 @@ namespace App\Http\Controllers;
 use App\Mail\IntegrationMail;
 use App\Models\Candidate;
 use App\Models\Vote;
+use Carbon\Carbon;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Mail;
 
 class StudentController extends Controller
 {
     public function index() {
+        $voteCounts = Vote::select('candidate_id', DB::raw('COUNT(*) as total_votes'))
+        ->groupBy('candidate_id')
+        ->get();
+        $voteCounts = $voteCounts->pluck('total_votes', 'candidate_id')->toArray();
+
+        $voteLastUpdated = Vote::select('candidate_id', DB::raw('MAX(created_at) as last_updated'))
+        ->groupBy('candidate_id')
+        ->get();
+
+        $voteLastUpdated = $voteLastUpdated->map(function ($item) {
+            $item->last_updated = Carbon::parse($item->last_updated);
+            return $item;
+        })->pluck('last_updated', 'candidate_id');
+
+        $user = auth()->user();
+        $selectedCandidate = $user->vote ? $user->vote->first()->candidate : null;
         return view('student.index', [
             'candidates' => Candidate::all(),
             'user' => auth()->user()->name,
-            'userr' => auth()->user()
+            'image' => auth()->user()->image,
+            'userr' => auth()->user(),
+            'selectedCandidate' => $selectedCandidate,
+            'voteCounts' => $voteCounts,
+            'voteLastUpdated' => $voteLastUpdated
         ]);
     }
 
-    public function about() {
-        return view('student.about', [
-            'user' => auth()->user()->name
+    public function show($id)
+    {
+        return view('student.show', [
+            'candidate' => Candidate::find($id),
+            'user' => auth()->user()->name,
+            'userr' => auth()->user(),
+            'image' => auth()->user()->image,
         ]);
     }
 
@@ -54,7 +80,8 @@ class StudentController extends Controller
     public function pageIntegrasi()
     {
         return view('student.cekIntegrasi', [
-            'user' => auth()->user()->name
+            'user' => auth()->user()->name,
+            'image' => auth()->user()->image,
         ]);
     }
 

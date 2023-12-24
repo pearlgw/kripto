@@ -9,7 +9,6 @@ use Illuminate\Notifications\Notifiable;
 use Laravel\Sanctum\HasApiTokens;
 use App\Models\Candidate;
 use App\Models\Vote;
-use App\Models\Integration;
 use Cviebrock\EloquentSluggable\Sluggable;
 
 class User extends Authenticatable
@@ -73,4 +72,5 @@ class User extends Authenticatable
     {
         return 'slug';
     }
+
 }

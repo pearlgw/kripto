@@ -7,6 +7,15 @@
     <form action="/kandidat" method="POST">
         @csrf
         <div class="mb-3">
+            <label for="status" class="form-label">Status</label>
+            <input type="text" name="status" class="form-control @error('status') is-invalid @enderror" id="status" value="{{ old('status') }}" placeholder="Pasangan No Urut ...">
+            @error('status')
+                <div class="invalid-feedback">
+                    {{ $message }}
+                </div>
+            @enderror
+        </div>
+        <div class="mb-3">
             <label for="kandidat" class="form-label">Kandidat Ketua</label>
             <select class="form-control" id="kandidat" name="user_id_ketua" required>
                 @foreach ($students as $student)

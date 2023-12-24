@@ -12,9 +12,12 @@ class AdminController extends Controller
     public function index() {
         return view('admin.index', [
             'user' => auth()->user()->name,
+            'image' => auth()->user()->image,
             'countUser' => User::count(),
             'countCandidate' => Candidate::count(),
-            'countVote' => Vote::count()
+            'countVote' => Vote::count(),
+            'candidates' => Candidate::all(),
+            'image' => auth()->user()->image,
         ]);
     }
 }

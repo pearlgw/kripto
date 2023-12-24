@@ -1,7 +1,6 @@
-@extends('layouts.main')
+@extends('dashboard.layouts.main')
 
-@section('contents')
-    @include('layouts.partials.navbar')
+@section('thisContent')
 
     <div class="container">
         @if(session('success'))
@@ -17,17 +16,19 @@
         @endif
 
         <h2>Cek Integrasi</h2>
+        <p>Masukan token yang sudah dikirim melalui email di dalam form inputan ini, dan klik Cek Validasi. <br> Kemudian akan muncul tombol unduh sertifikat, lalu di unduh</p>
+
+
         <form action="/cek-integrasi" method="POST">
             @csrf
             <div class="mb-3">
                 <label for="integrasi" class="form-label">Masukan Token</label>
                 <input type="text" class="form-control" name="integrasi" id="integrasi">
             </div>
-            <button type="submit">cek validasi</button>
+            <button type="submit" class="btn btn-primary">Cek Validasi</button>
         </form>
-        {{-- <a href="/download-certificate" class="btn btn-primary">Unduh Sertifikat PDF</a> --}}
         @if(session('downloadUrl'))
-            <a href="{{ session('downloadUrl') }}" class="btn btn-primary">Unduh Sertifikat</a>
+            <a href="{{ session('downloadUrl') }}" class="btn btn-warning mt-2">Unduh Sertifikat</a>
         @endif
     </div>
 @endsection
