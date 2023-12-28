@@ -4,11 +4,11 @@ Ketika sudah mendownload file ini, jangan lupa setting env nya dulu seperti di b
 DB_CONNECTION=mysql <br>
 DB_HOST=127.0.0.1 <br>
 DB_PORT=3306 <br>
-DB_DATABASE=(isi sesuai nama database yang kamu mau) <br>
+<b>DB_DATABASE=(isi sesuai nama database yang kamu mau)</b> <br>
 DB_USERNAME=root <br>
 DB_PASSWORD= <br>
 Di dalam DB_DATABASE boleh di isi terserah karena itu nantinya nama database, dan Selain DB_DATABASE gausah di apa-apain. <br>
-kemudian ketikan perintah di terminal <b>"php artisan migrate"</b>, setelah itu ketikan "php artisan db:seed". kemudian selesai dan di coba secara keseluruhan.<br>
+kemudian ketikan perintah di terminal <b>"php artisan migrate"</b>, setelah itu ketikan <b>"php artisan db:seed"</b>. kemudian selesai dan di coba secara keseluruhan.<br>
 
 Kemudian masih di dalam env tapi di bagian email harus di setting sama persis di bawah ini, supaya bisa mengirimkan email:<br>
 MAIL_MAILER=smtp <br>
