@@ -1,5 +1,26 @@
 # Kripto E-vote
 
+Ketika sudah mendownload file ini, jangan lupa setting env nya dulu seperti di bawah ini:
+DB_CONNECTION=mysql
+DB_HOST=127.0.0.1
+DB_PORT=3306
+DB_DATABASE=(isi sesuai yang kamu mau)
+DB_USERNAME=root
+DB_PASSWORD=
+Di dalam DB_DATABASE boleh di isi terserah karena itu nantinya nama database. 
+kemudian ketikan perintah di terminal "php artisan migrate", setelah itu ketikan "php artisan db:seed". kemudian selesai dan di coba secara keseluruhan.
+
+Kemudian masih di dalam env tapi di bagian email harus di setting sama persis di bawah ini, supaya bisa mengirimkan email:
+MAIL_MAILER=smtp
+MAIL_HOST=smtp.gmail.com
+MAIL_PORT=587
+MAIL_USERNAME=senterkecil936@gmail.com
+MAIL_PASSWORD=pliszbibpeffkzde
+MAIL_ENCRYPTION=tls
+MAIL_FROM_ADDRESS="senterkecil936@gmail.com"
+MAIL_FROM_NAME="${APP_NAME}"
+
+
 Tampilan Form Login Utama
 ![tampilan pertama](laporan/0_form_login.png)
 
