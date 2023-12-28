@@ -20,7 +20,7 @@
                                 @if ($candidate->ketua->image)
                                     <img src="{{ asset('storage/' . $candidate->ketua->image) }}" class="card-img-top mx-auto d-block rounded-circle" style="width: 50%" alt="{{ $candidate->ketua->name }}">
                                 @else
-                                    <img src="{{ asset('storage/default.jpg') }}" class="card-img-top mx-auto d-block rounded-circle" alt="Default Image" style="width: 50%">
+                                    <img src="{{ asset('img/default.jpg') }}" class="card-img-top mx-auto d-block rounded-circle" alt="Default Image" style="width: 50%">
                                 @endif
                                 <div class="text-center mt-3">
                                     <h5>{{ $candidate->ketua->name }}<br>{{ $candidate->ketua->nim }}</h5>
@@ -29,9 +29,9 @@
                             <div class="col-md-6">
                                 <h4 class="text-center mb-3">Calon Wakil</h4>
                                 @if ($candidate->wakil->image)
-                                    <img src="{{ asset('storage/' . $candidate->wakil->image) }}" class="card-img-top mx-auto d-block rounded-circle" style="width: 50%" alt="{{ $candidate->wakil->name }}">
+                                    <img src="{{ asset('img/' . $candidate->wakil->image) }}" class="card-img-top mx-auto d-block rounded-circle" style="width: 50%" alt="{{ $candidate->wakil->name }}">
                                 @else
-                                    <img src="{{ asset('storage/default.jpg') }}" class="card-img-top mx-auto d-block rounded-circle" alt="Default Image" style="width: 50%">
+                                    <img src="{{ asset('img/default.jpg') }}" class="card-img-top mx-auto d-block rounded-circle" alt="Default Image" style="width: 50%">
                                 @endif
                                 <div class="text-center mt-3">
                                     <h5>{{ $candidate->wakil->name }}<br>{{ $candidate->wakil->nim }}</h5>

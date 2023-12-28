@@ -14,7 +14,7 @@
                 @if ($image)
                     <img class="img-profile rounded-circle" src="{{ asset('storage/' . $image) }}">
                 @else
-                    <img class="img-profile rounded-circle" src="{{ asset('storage/default.jpg') }}">
+                    <img class="img-profile rounded-circle" src="{{ asset('img/default.jpg') }}">
                 @endif
             </a>
             <!-- Dropdown - User Information -->

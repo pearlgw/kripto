@@ -39,7 +39,7 @@
                                 @if ($usr->image)
                                     <img src="{{ asset('storage/' . $usr->image) }}" style="width: 50px" class="rounded-circle">
                                 @else
-                                    <img src="{{ asset('storage/default.jpg') }}" style="width: 50px" class="rounded-circle">
+                                    <img src="{{ asset('img/default.jpg') }}" style="width: 50px" class="rounded-circle">
                                 @endif
                             </td>
                             <td style="vertical-align: middle;">

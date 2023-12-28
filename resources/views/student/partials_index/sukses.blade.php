@@ -11,7 +11,7 @@
                         @if ($selectedCandidate->ketua->image)
                             <img src="{{ asset('storage/' . $selectedCandidate->ketua->image) }}" class="card-img-top rounded-circle" alt="{{ $selectedCandidate->ketua->name }}">
                         @else
-                            <img src="{{ asset('storage/default.jpg') }}" class="card-img-top rounded-circle" alt="Default Image">
+                            <img src="{{ asset('img/default.jpg') }}" class="card-img-top rounded-circle" alt="Default Image">
                         @endif
                         <div class="text-center mt-3">
                             <p>{{ $selectedCandidate->ketua->name }}<br>{{ $selectedCandidate->ketua->nim }}</p>
@@ -22,7 +22,7 @@
                         @if ($selectedCandidate->wakil->image)
                             <img src="{{ asset('storage/' . $selectedCandidate->wakil->image) }}" class="card-img-top rounded-circle" alt="{{ $selectedCandidate->wakil->name }}">
                         @else
-                            <img src="{{ asset('storage/default.jpg') }}" class="card-img-top rounded-circle" alt="Default Image">
+                            <img src="{{ asset('img/default.jpg') }}" class="card-img-top rounded-circle" alt="Default Image">
                         @endif
                         <div class="text-center mt-3">
                             <p>{{ $selectedCandidate->wakil->name }}<br>{{ $selectedCandidate->wakil->nim }}</p>

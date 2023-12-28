@@ -18,7 +18,7 @@
                             @if ($users->image)
                                 <img src="{{ asset('storage/' . $users->image) }}" width="50%" class="rounded-circle mx-auto d-block pb-4">
                             @else
-                                <img src="{{ asset('storage/default.jpg') }}" width="50%" class="rounded-circle mx-auto d-block pb-4">
+                                <img src="{{ asset('img/default.jpg') }}" width="50%" class="rounded-circle mx-auto d-block pb-4">
                             @endif
                             NIM <div class="font-weight-bold mb-1">{{ $users->nim }}</div>
                             Nama <div class="font-weight-bold mb-1">{{ $users->name }}</div>
