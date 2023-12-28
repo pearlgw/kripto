@@ -1,66 +1,68 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# Kripto E-vote
+## Langkah Langkah
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+Ketika sudah mendownload file ini, jangan lupa setting env nya dulu seperti di bawah ini:<br>
+DB_CONNECTION=mysql <br>
+DB_HOST=127.0.0.1 <br>
+DB_PORT=3306 <br>
+<b>DB_DATABASE=(isi sesuai nama database yang kamu mau)</b> <br>
+DB_USERNAME=root <br>
+DB_PASSWORD= <br>
+Di dalam DB_DATABASE boleh di isi terserah karena itu nantinya nama database, dan Selain DB_DATABASE gausah di apa-apain. <br>
+kemudian ketikan perintah di terminal <b>"php artisan migrate"</b>, setelah itu ketikan <b>"php artisan db:seed"</b>. kemudian selesai dan di coba secara keseluruhan.<br>
 
-## About Laravel
+Kemudian masih di dalam env tapi di bagian email harus di setting sama persis di bawah ini, supaya bisa mengirimkan email:<br>
+MAIL_MAILER=smtp <br>
+MAIL_HOST=smtp.gmail.com <br>
+MAIL_PORT=587 <br>
+MAIL_USERNAME=senterkecil936@gmail.com <br>
+MAIL_PASSWORD=pliszbibpeffkzde <br>
+MAIL_ENCRYPTION=tls <br>
+MAIL_FROM_ADDRESS="senterkecil936@gmail.com" <br>
+<hr>
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+Tampilan Form Login Utama
+![tampilan pertama](laporan/0_form_login.png)
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+Tampilan Dashboard Admin
+![tampilan pertama](laporan/1_dashboard_admin.png)
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+Tampilan Dashboard Admin (student)
+![tampilan pertama](laporan/2_data_student_admin.png)
 
-## Learning Laravel
+Tampilan Dashboard Admin (student)
+![tampilan pertama](laporan/3_create_student.png)
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+Tampilan Dashboard Admin (student)
+![tampilan pertama](laporan/4_show_student.png)
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+Tampilan Dashboard Admin (student)
+![tampilan pertama](laporan/5_edit_student.png)
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 2000 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+Tampilan Dashboard Admin (candidate)
+![tampilan pertama](laporan/6_data_candidate_admin.png)
 
-## Laravel Sponsors
+Tampilan Dashboard Admin (candidate)
+![tampilan pertama](laporan/8_show_candidate.png)
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+Tampilan Dashboard Admin (candidate)
+![tampilan pertama](laporan/9_edit_candidate.png)
 
-### Premium Partners
+Tampilan Dashboard Student
+![tampilan pertama](laporan/10_dashboard_student.png)
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[WebReinvent](https://webreinvent.com/)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Jump24](https://jump24.co.uk)**
-- **[Redberry](https://redberry.international/laravel/)**
-- **[Active Logic](https://activelogic.com)**
-- **[byte5](https://byte5.de)**
-- **[OP.GG](https://op.gg)**
+Tampilan Dashboard Student
+![tampilan pertama](laporan/11_dashboard_student.png)
 
-## Contributing
+Tampilan Dashboard Student
+![tampilan pertama](laporan/12_detail_candidate_student.png)
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+Tampilan Setelah Melakukan Vote (Tampilan Dashboard Student)
+![tampilan pertama](laporan/13_page_after_vote.png)
 
-## Code of Conduct
+Tampilan Dashboard Student
+![tampilan pertama](laporan/14_cek_integrasi.png)
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+Setelah Melakukan Pengecekan Integrasi Yang Di Kirim Dari Email( Tampilan Dashboard Student)
+![tampilan pertama](laporan/15_sertifikat.png)
 
-## Security Vulnerabilities
-
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
-
-## License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
