@@ -8,7 +8,7 @@ DB_DATABASE=(isi sesuai nama database yang kamu mau) <br>
 DB_USERNAME=root <br>
 DB_PASSWORD= <br>
 Di dalam DB_DATABASE boleh di isi terserah karena itu nantinya nama database, dan Selain DB_DATABASE gausah di apa-apain. <br>
-kemudian ketikan perintah di terminal "php artisan migrate", setelah itu ketikan "php artisan db:seed". kemudian selesai dan di coba secara keseluruhan.<br>
+kemudian ketikan perintah di terminal <b>"php artisan migrate"</b>, setelah itu ketikan "php artisan db:seed". kemudian selesai dan di coba secara keseluruhan.<br>
 
 Kemudian masih di dalam env tapi di bagian email harus di setting sama persis di bawah ini, supaya bisa mengirimkan email:<br>
 MAIL_MAILER=smtp <br>
