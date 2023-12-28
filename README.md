@@ -1,4 +1,5 @@
 # Kripto E-vote
+## Langkah Langkah
 
 Ketika sudah mendownload file ini, jangan lupa setting env nya dulu seperti di bawah ini:<br>
 DB_CONNECTION=mysql <br>
