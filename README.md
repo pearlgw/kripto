@@ -19,7 +19,7 @@ MAIL_USERNAME=senterkecil936@gmail.com <br>
 MAIL_PASSWORD=pliszbibpeffkzde <br>
 MAIL_ENCRYPTION=tls <br>
 MAIL_FROM_ADDRESS="senterkecil936@gmail.com" <br>
-
+<hr>
 
 Tampilan Form Login Utama
 ![tampilan pertama](laporan/0_form_login.png)
