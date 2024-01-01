@@ -29,7 +29,14 @@ class StudentController extends Controller
 
         $user = auth()->user();
         $selectedCandidate = $user->vote ? $user->vote->first()->candidate : null;
-        return view('student.index', [
+
+        $paslonVotes = Candidate::select(DB::raw('COUNT(votes.id) as votes'), 'candidates.id as paslon_id')
+            ->leftJoin('votes', 'candidates.id', '=', 'votes.candidate_id')
+            ->groupBy('paslon_id')
+            ->get();
+
+        $totalVotes = Vote::count();
+        return view('student.index', compact('paslonVotes', 'totalVotes'), [
             'candidates' => Candidate::all(),
             'user' => auth()->user()->name,
             'image' => auth()->user()->image,

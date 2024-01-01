@@ -8,4 +8,6 @@
 
     @include('student.partials_index.totalSuara')
 
+    @include('student.partials_index.grafik')
+
 @endsection
