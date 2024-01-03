@@ -43,13 +43,6 @@
                 </a>
             </li>
 
-            <li class="nav-item active">
-                <a class="nav-link" href="/waktu">
-                    <i class="fas fa-stopwatch"></i>
-                    <span>Setting Waktu</span>
-                </a>
-            </li>
-
             <!-- Divider -->
             <hr class="sidebar-divider">
 

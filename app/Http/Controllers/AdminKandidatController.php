@@ -28,10 +28,17 @@ class AdminKandidatController extends Controller
      */
     public function create()
     {
+        $selectedCandidates = Candidate::pluck('user_id_ketua')->merge(Candidate::pluck('user_id_wakil'))->toArray();
+
+        $students = User::where('role', '!=', 'admin')
+            ->whereNotIn('id', $selectedCandidates)
+            ->get();
+
         return view('admin.kandidat.create', [
             'user' => auth()->user()->name,
-            'students' => User::where('role', '!=', 'admin')->get(),
+            'students' => $students,
             'image' => auth()->user()->image,
+            'selectedCandidates' => $selectedCandidates,
         ]);
     }
 
@@ -43,11 +50,16 @@ class AdminKandidatController extends Controller
         $validatedData = $request->validate([
             'status' => 'required',
             'user_id_ketua' => 'required',
-            'user_id_wakil' => 'required',
+            'user_id_wakil' => [
+                'required',
+                Rule::exists('users', 'id')->whereNot('id', $request->input('user_id_ketua')),
+            ],
             'visi' => 'required',
             'misi' => 'required',
             'program_kerja' => 'required',
             'experience' => 'required',
+        ], [
+            'user_id_wakil.exists' => 'Pemilihan wakil dan ketua tidak boleh sama, terima kasih.',
         ]);
 
         $validatedData['visi'] = strip_tags($request->visi);

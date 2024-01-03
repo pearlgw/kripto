@@ -6,7 +6,6 @@ use App\Http\Controllers\AdminMahasiswaController;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\PDFController;
 use App\Http\Controllers\RedirectController;
-use App\Http\Controllers\SettingwaktuController;
 use App\Http\Controllers\StudentController;
 use App\Http\Controllers\TotalSuaraController;
 use App\Models\Student;
@@ -41,7 +40,6 @@ Route::group(['middleware' => ['auth', 'checkrole:admin']], function() {
     Route::get('/admin', [AdminController::class, 'index']);
     Route::resource('/mahasiswa', AdminMahasiswaController::class);
     Route::resource('/kandidat', AdminKandidatController::class)->parameters(['kandidat' => 'slug']);
-    Route::get('/waktu', [SettingwaktuController::class, 'index']);
 });
 
 Route::group(['middleware' => ['auth', 'checkrole:student']], function() {

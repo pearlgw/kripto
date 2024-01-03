@@ -4,7 +4,8 @@
     <div class="d-flex justify-content-center align-items-center vh-100">
         <div class="card" style="width: 25rem;">
             <div class="card-header text-center">
-              Login
+                <img src="{{ asset('img/udinus.png') }}" alt="Udinus" width="20%">
+                <h3 class="mt-2">Form Login</h3>
             </div>
 
             @if (session()->has('error'))
@@ -18,25 +19,29 @@
                 <form method="post" action="/">
                     @csrf
                     <div class="mb-3">
-                      <label for="nim" class="form-label">NIM</label>
-                      <input type="text" name="nim" class="form-control @error('nim') is-invalid @enderror" id="nim">
-                      @error('nim')
-                        <div class="invalid-feedback">
-                            {{ $message }}
-                        </div>
-                      @enderror
+                        <label for="nim" class="form-label"><b>NIM</b></label>
+                        <input type="text" name="nim" class="form-control @error('nim') is-invalid @enderror" placeholder="A11.2022.12345"
+                            id="nim">
+                        @error('nim')
+                            <div class="invalid-feedback">
+                                {{ $message }}
+                            </div>
+                        @enderror
                     </div>
                     <div class="mb-3">
-                      <label for="password" class="form-label">Password</label>
-                      <input type="password" name="password" class="form-control @error('password') is-invalid @enderror" id="password">
-                      @error('password')
-                        <div class="invalid-feedback">
-                            {{ $message }}
-                        </div>
-                      @enderror
+                        <label for="password" class="form-label"><b>Password</b></label>
+                        <input type="password" name="password" placeholder="*****"
+                            class="form-control @error('password') is-invalid @enderror" id="password">
+                        @error('password')
+                            <div class="invalid-feedback">
+                                {{ $message }}
+                            </div>
+                        @enderror
                     </div>
 
-                    <button type="submit" class="btn btn-primary">Submit</button>
+                    <center>
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                    </center>
                 </form>
             </div>
         </div>

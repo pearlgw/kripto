@@ -23,8 +23,8 @@ return new class extends Migration
             $table->text('experience');
             $table->timestamps();
 
-            $table->foreign('user_id_ketua')->references('id')->on('users')->onDelete('cascade');
-            $table->foreign('user_id_wakil')->references('id')->on('users')->onDelete('cascade');
+            $table->foreign('user_id_ketua')->references('id')->on('users');
+            $table->foreign('user_id_wakil')->references('id')->on('users');
         });
     }
 
