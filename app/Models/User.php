@@ -59,6 +59,11 @@ class User extends Authenticatable
         return $this->hasOne(Vote::class);
     }
 
+    // public function complaint()
+    // {
+    //     return $this->hasMany(Complaint::class);
+    // }
+
     public function sluggable(): array
     {
         return [

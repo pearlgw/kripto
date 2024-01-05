@@ -80,7 +80,7 @@ class StudentController extends Controller
                 new IntegrationMail($integrationCode, $user)
             );
 
-            return redirect('/home')->with('success', 'Berhasil memilih kandidat. Silahkan Cek Integrasi Anda di Email');
+            return redirect('/home')->with('success', 'Successfuly');
         }
     }
 

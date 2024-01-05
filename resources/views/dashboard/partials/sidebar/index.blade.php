@@ -65,6 +65,13 @@
                     <span>Cek Integrasi</span>
                 </a>
             </li>
+
+            {{-- <li class="nav-item active">
+                <a class="nav-link" href="/pengaduan">
+                    <i class="fas fa-envelope-open-text"></i>
+                    <span>Pengaduan</span>
+                </a>
+            </li> --}}
             <!-- Divider -->
             <hr class="sidebar-divider">
 

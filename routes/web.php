@@ -5,6 +5,7 @@ use App\Http\Controllers\AdminKandidatController;
 use App\Http\Controllers\AdminMahasiswaController;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\PDFController;
+use App\Http\Controllers\PengaduanController;
 use App\Http\Controllers\RedirectController;
 use App\Http\Controllers\StudentController;
 use App\Http\Controllers\TotalSuaraController;
@@ -51,6 +52,8 @@ Route::group(['middleware' => ['auth', 'checkrole:student']], function() {
     Route::post('/cek-integrasi', [StudentController::class, 'cekIntegrasi']);
     Route::post('/home/vote/{candidate}', [StudentController::class, 'vote']);
     Route::get('/download-certificate/{token}', [PDFController::class, 'generateCertificate'])->name('download-certificate');
+    // Route::get('/pengaduan', [PengaduanController::class, 'index']);
+    // Route::post('/pengaduan', [PengaduanController::class, 'store']);
 });
 
 Route::get('/dashboard', function(){

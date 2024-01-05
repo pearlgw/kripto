@@ -5,7 +5,7 @@
         <div class="card" style="width: 25rem;">
             <div class="card-header text-center">
                 <img src="{{ asset('img/udinus.png') }}" alt="Udinus" width="20%">
-                <h3 class="mt-2">Form Login</h3>
+                <h3 class="mt-2">E-Vote</h3>
             </div>
 
             @if (session()->has('error'))
@@ -40,10 +40,11 @@
                     </div>
 
                     <center>
-                        <button type="submit" class="btn btn-primary">Submit</button>
+                        <button type="submit" class="btn btn-primary">Sign in</button>
                     </center>
                 </form>
             </div>
         </div>
     </div>
 @endsection
+
