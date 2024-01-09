@@ -28,6 +28,7 @@
                         <input type="text" class="form-control" name="integrasi" id="integrasi">
                     </div>
                     <button type="submit" class="btn btn-primary">Cek Validasi</button>
+                    <a href="/home" class="btn btn-secondary">Kembali</a>
                 </form>
                 @if (session('downloadUrl'))
                     <a href="{{ session('downloadUrl') }}" class="btn btn-warning mt-2">Unduh Sertifikat</a>
