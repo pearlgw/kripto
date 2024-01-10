@@ -56,7 +56,7 @@ class DatabaseSeeder extends Seeder
             'nim' => 'A11.2022.14638',
             'name' => 'Ahmad Ramdani',
             'password' => bcrypt('password'),
-            'email' => 'ahmad@gmail.com',
+            'email' => '111202214636@mhs.dinus.ac.id',
             'phone_number' => '089765433456',
             'alamat' => 'Bawen'
         ]);
