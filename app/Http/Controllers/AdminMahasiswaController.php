@@ -14,6 +14,7 @@ class AdminMahasiswaController extends Controller
     public function index()
     {
         return view('admin.mahasiswa.index', [
+            'title' => 'Mahasiswa',
             'user' => auth()->user()->name,
             'image' => auth()->user()->image,
             'users' => User::where('role', '!=', 'admin')->get()
@@ -26,6 +27,7 @@ class AdminMahasiswaController extends Controller
     public function create()
     {
         return view('admin.mahasiswa.create', [
+            'title' => 'Tambah Mahasiswa',
             'image' => auth()->user()->image,
             'user' => auth()->user()->name,
         ]);
@@ -63,6 +65,7 @@ class AdminMahasiswaController extends Controller
     public function show($slug)
     {
         return view('admin.mahasiswa.show', [
+            'title' => 'Detail Mahasiswa',
             'users' => User::where('slug', $slug)->firstOrFail(),
             'user' => auth()->user()->name,
             'userr' => auth()->user(),
@@ -76,6 +79,7 @@ class AdminMahasiswaController extends Controller
     public function edit(string $slug)
     {
         return view('admin.mahasiswa.edit', [
+            'title' => 'Edit Mahasiswa',
             'student' => User::where('slug', $slug)->first(),
             'user' => auth()->user()->name,
             'image' => auth()->user()->image,

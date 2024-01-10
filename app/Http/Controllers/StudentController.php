@@ -37,6 +37,7 @@ class StudentController extends Controller
 
         $totalVotes = Vote::count();
         return view('student.index', compact('paslonVotes', 'totalVotes'), [
+            'title' => 'Dashboard',
             'candidates' => Candidate::all(),
             'user' => auth()->user()->name,
             'image' => auth()->user()->image,
@@ -50,6 +51,7 @@ class StudentController extends Controller
     public function show($id)
     {
         return view('student.show', [
+            'title' => 'Detail Kandidat',
             'candidate' => Candidate::find($id),
             'user' => auth()->user()->name,
             'userr' => auth()->user(),
@@ -87,6 +89,7 @@ class StudentController extends Controller
     public function pageIntegrasi()
     {
         return view('student.cekIntegrasi', [
+            'title' => 'Validasi Integrasi',
             'user' => auth()->user()->name,
             'image' => auth()->user()->image,
         ]);

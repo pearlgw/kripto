@@ -17,9 +17,10 @@ class AdminController extends Controller
 
         $totalVotes = Vote::count();
         return view('admin.index', compact('paslonVotes', 'totalVotes'), [
+            'title' => 'Dashboard',
             'user' => auth()->user()->name,
             'image' => auth()->user()->image,
-            'countUser' => User::count(),
+            'countUser' => User::where('role', '<>', 'admin')->count(),
             'countCandidate' => Candidate::count(),
             'countVote' => Vote::count(),
             'candidates' => Candidate::all(),
