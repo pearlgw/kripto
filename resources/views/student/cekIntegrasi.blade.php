@@ -20,8 +20,11 @@
                 <p>Masukan token yang sudah dikirim melalui email di dalam form inputan ini, dan klik Cek Validasi. <br>
                     Kemudian akan muncul tombol unduh sertifikat, lalu di unduh</p>
 
+<<<<<<< Updated upstream
 
 
+=======
+>>>>>>> Stashed changes
                 <form action="/cek-integrasi" method="POST">
                     @csrf
                     <div class="mb-3">

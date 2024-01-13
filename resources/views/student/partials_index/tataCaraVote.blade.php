@@ -1,68 +1,79 @@
 <div class="card shadow mb-4">
     <div class="card-body">
-        <h3 class="m-0 font-weight-bold text-primary">Tata Cara E-Vote</h3>
+        <h4 class="m-0 font-weight-bold text-primary">Tata Cara Menggunakan E-Voku</h4>
         <hr>
         <ol id="toggleMessage">
             <li>
-                <h5>Mempelajari Visi Misi tiap Kandidat</h5>
-                <p>Bacalah dengan seksama dan pilih kandidat dengan bijak, tekan tombol "detail" untuk mengetahui
-                    visi
-                    misi dari tiap kandidat sebelum anda tekan tombol "pilih"</p>
+                <h5>Kenali visi misi setiap kandidat</h5>
+                <p>
+                    Sebelum memilih, bacalah visi misi setiap kandidat dengan baik.
+                    Anda dapat menekan tombol <b>"Detail"</b> untuk melihat visi misi setiap kandidat.
+                    Pilihlah kandidat dengan menekan tombol <b>"Pilih"</b> yang sesuai dengan harapan Anda.
+                </p>
             </li>
             <li>
-                <h5>Pilih Kandidat Pasangan Calon pada di bawah ini "👇" dengan Hati-hati</h5>
-                <p>Anda dapat memilih salah satu kandidat pasangan calon. Mohon perhatikan
-                    dengan cermat dan pastikan Anda yakin dengan pilihan Anda. Jika yakin, tekan tombol "Submit"
-                    untuk
-                    mengirim suara Anda. (...)</p>
+                <h5>Pilih kandidat pasangan calon di bawah "👇" dengan hati-hati</h5>
+                <p>
+                    Anda hanya dapat memilih satu kandidat saja. 
+                    Pastikan Anda yakin dengan pilihan Anda. 
+                    Tekan tombol <b>"Submit"</b> untuk mengirim suara Anda. (...)</p>
             </li>
         </ol>
         <ol id="content2" style="max-height: 0; overflow: hidden; transition: max-height 0.5s ease;">
             <li>
-                <h5>Mempelajari Visi Misi tiap Kandidat</h5>
-                <p>Bacalah dengan seksama dan pilih kandidat dengan bijak, tekan tombol "detail" untuk mengetahui
-                    visi
-                    misi dari tiap kandidat sebelum anda tekan tombol "pilih"</p>
+                <h5>Kenali visi misi setiap kandidat</h5>
+                <p>
+                    Sebelum memilih, bacalah visi misi setiap kandidat dengan baik.
+                    Anda dapat menekan tombol <b>"Detail"</b> untuk melihat visi misi setiap kandidat.
+                    Pilihlah kandidat dengan menekan tombol <b>"Pilih"</b> yang sesuai dengan harapan Anda.
+                </p>
             </li>
             <li>
-                <h5>Pilih Kandidat Pasangan Calon pada di bawah ini "👇" dengan Hati-hati</h5>
-                <p>Anda dapat memilih salah satu kandidat pasangan calon. Mohon perhatikan
-                    dengan cermat dan pastikan Anda yakin dengan pilihan Anda. Jika yakin, tekan tombol "Submit"
-                    untuk
-                    mengirim suara Anda.</p>
+                <h5>Pilih kandidat pasangan calon di bawah "👇" dengan hati-hati</h5>
+                <p>
+                    Anda hanya dapat memilih satu kandidat saja. 
+                    Pastikan Anda yakin dengan pilihan Anda.
+                    Tekan tombol <b>"Submit"</b> untuk mengirim suara Anda.</p>
             </li>
             <li>
-                <h5>Dapatkan Token Melalui Email</h5>
-                <p>Usai melakukan vote, sistem akan mengirimkan token ke alamat email yang terdaftar. Pastikan untuk
-                    memeriksa email Anda.</p>
+                <h5>Dapatkan token melalui email</h5>
+                <p>
+                    Setelah memilih, Anda akan mendapatkan <b>token</b> melalui email yang sudah terdaftar. 
+                    Cek email Anda untuk melihat <b>token</b> Anda.
+                </p>
             </li>
             <li>
-                <h5>Masukkan Token di Menu Cek Integrasi</h5>
-                <p>Selanjutnya, gunakan token yang diterima melalui email untuk verifikasi di menu cek integrasi
-                    pada
-                    platform E-Vote.</p>
+                <h5>Masukkan token di menu cek integrasi</h5>
+                <p>
+                    Selanjutnya, masukkan token yang Anda terima melalui email di menu <b>"Cek Integrasi"</b> untuk verifikasi
+                    pada platform E-Voku.
+                </p>
             </li>
             <li>
-                <h5>Unduh Sertifikat Jika Berhasil</h5>
-                <p>Jika verifikasi sukses, Anda dapat mengunduh sertifikat sebagai tanda legalitas partisipasi dalam
-                    proses voting untuk kemajuan Pemimpin Organisasi Udinus.</p>
+                <h5>Unduh sertifikat jika berhasil</h5>
+                <p>
+                    Jika token Anda valid, Anda dapat mengunduh sertifikat sebagai bukti bahwa Anda telah berpartisipasi dalam
+                    pemilihan untuk kemajuan Pemimpin Organisasi UDINUS.
+                </p>
             </li>
             <li>
-                <h5>Periksa Informasi di Dashboard</h5>
-                <p>Akses dashboard untuk memastikan informasi bahwa Anda telah memilih salah satu kandidat pasangan
-                    calon. Pastikan informasi tersebut sesuai dengan pilihan Anda.</p>
+                <h5>Cek informasi di dashboard</h5>
+                <p>
+                    Buka <b>dashboard</b> untuk melihat informasi tentang kandidat yang Anda pilih.
+                    Pastikan informasi tersebut sesuai dengan pilihan Anda.
+                </p>
             </li>
             <li>
-                <h5>Pantau dan Waspada terhadap Perbedaan di Dashboard</h5>
-                <p>Jika Anda menemui perbedaan antara kandidat yang Anda pilih dan informasi di dashboard, segera
-                    laporkan ke <a href="https://wa.me/6285870254510?" class="btn btn-primary"
-                        target="_blank">Pengaduan</a> karena hal tersebut bisa menandakan adanya potensi pembajakan
-                    akun.</p>
+                <h5>Pantau dan waspadai terhadap perbedaan di dashboard</h5>
+                <p>
+                    Jika Anda melihat perbedaan antara kandidat yang Anda pilih dan informasi di dashboard, 
+                    segera laporkan ke 
+                    <a href="https://wa.me/6285870254510?" class="btn btn-primary" target="_blank">Pengaduan</a>. 
+                    Hal ini dapat menandakan adanya potensi pembajakan akun.
+                </p>
             </li>
             <p>
-                Dengan mengikuti langkah-langkah ini, diharapkan proses E-Vote dapat berjalan dengan transparan,
-                aman, dan
-                memberikan kepastian bagi setiap pemilih.
+                Ikuti langkah-langkah ini agar proses pemilihan dapat berjalan dengan lancar, aman, dan jujur.
             </p>
         </ol>
         <button onclick="toggleContent('content2')" class="btn btn-primary" id="toggleButton">Show</button>
@@ -85,6 +96,4 @@
             }
         }
     </script>
-
-
 </div>

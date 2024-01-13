@@ -1,6 +1,6 @@
 @if ($totalVotes > 0)
         <div class="d-sm-flex align-items-center justify-content-between mb-4">
-            <h1 class="h3 mb-0 text-gray-800">Rekapitulasi Suara Terbanyak</h1>
+            <h4 class="h4 mb-0 text-primary font-weight-bold">Rekapitulasi Suara Terbanyak</h4>
         </div>
         <div class="row">
             <div class="col-md-5">
@@ -24,7 +24,7 @@
                                     <p class="text-center">{{ $candidate->status }}</p>
                                     <div class="row no-gutters align-items-center">
                                         <div class="col">
-                                            Calon Ketua: <div class="font-weight-bold text-primary text-uppercase mb-1">{{ $candidate->ketua->name }}</div>
+                                            Calon Ketua: <div class="font-weight-bold text-primary mb-1">{{ $candidate->ketua->name }}</div>
                                             @if ($candidate->ketua->image)
                                                 <img src="{{ asset('storage/' . $candidate->ketua->image) }}" class="card-img-top rounded-circle" alt="{{ $candidate->ketua->name }}" style="width: 30%">
                                             @else
@@ -32,7 +32,7 @@
                                             @endif
                                         </div>
                                         <div class="col">
-                                            Calon Wakil: <div class="font-weight-bold text-primary text-uppercase mb-1">{{ $candidate->wakil->name }}</div>
+                                            Calon Wakil: <div class="font-weight-bold text-primary mb-1">{{ $candidate->wakil->name }}</div>
                                             @if ($candidate->wakil->image)
                                                 <img src="{{ asset('storage/' . $candidate->wakil->image) }}" class="card-img-top rounded-circle" alt="{{ $candidate->wakil->name }}" style="width: 30%">
                                             @else
@@ -53,7 +53,7 @@
                                     </div>
                                 </div>
                                 <div class="card-footer">
-                                    <small class="text-body-secondary">Last updated {{ $candidate->getLastVoteTime() }}</small>
+                                    <small class="text-body-secondary">Terakhir diperbarui {{ $candidate->getLastVoteTime() }}</small>
                                 </div>
                             </div>
                         </div>

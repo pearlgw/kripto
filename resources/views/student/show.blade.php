@@ -8,7 +8,7 @@
             </div>
         @endif
         <div class="card-header py-3 text-center">
-            <h3 class="m-0 font-weight-bold text-primary">Detail Paslon</h3>
+            <h3 class="m-0 font-weight-bold text-primary">Detail Pasangan Calon</h3>
         </div>
         <div class="card-body">
             <div class="row">
@@ -23,7 +23,7 @@
                                     <img src="{{ asset('img/default.jpg') }}" class="card-img-top mx-auto d-block rounded-circle" alt="Default Image" style="width: 50%">
                                 @endif
                                 <div class="text-center mt-3">
-                                    <h5>{{ $candidate->ketua->name }}<br>{{ $candidate->ketua->nim }}</h5>
+                                    <h5 class="font-weight-bold">{{ $candidate->ketua->name }}<br>{{ $candidate->ketua->nim }}</h5>
                                 </div>
                             </div>
                             <div class="col-md-6">
@@ -34,31 +34,31 @@
                                     <img src="{{ asset('img/default.jpg') }}" class="card-img-top mx-auto d-block rounded-circle" alt="Default Image" style="width: 50%">
                                 @endif
                                 <div class="text-center mt-3">
-                                    <h5>{{ $candidate->wakil->name }}<br>{{ $candidate->wakil->nim }}</h5>
+                                    <h5 class="font-weight-bold">{{ $candidate->wakil->name }}<br>{{ $candidate->wakil->nim }}</h5>
                                 </div>
                             </div>
                         </div>
                         <div class="container">
-                            <h4 class="text-weight-bold text-center">Visi</h4>
+                            <h4 class="font-weight-bold text-center">Visi</h4>
                             <p class="text-justify">{!! $candidate->visi !!}</p>
-                            <h4 class="text-weight-bold text-center mt-4">Misi</h4>
+                            <h4 class="font-weight-bold text-center mt-4">Misi</h4>
                             <p class="text-justify">{!! $candidate->misi !!}</p>
-                            <h4 class="text-weight-bold text-center mt-4">Program Kerja</h4>
+                            <h4 class="font-weight-bold text-center mt-4">Program Kerja</h4>
                             <p class="text-justify">{!! $candidate->program_kerja !!}</p>
-                            <h4 class="text-weight-bold text-center mt-4">Experience</h4>
-                            <p class="text-justify">{!! $candidate->experience !!}</p>
+                            {{-- <h4 class="font-weight-bold text-center mt-4">Experience</h4>
+                            <p class="text-justify">{!! $candidate->experience !!}</p> --}}
                         </div>
                         <div class="card-body">
                             <div class="row d-flex justify-content-center">
                                 <a href="/student" class="btn btn-info mx-2"><i class="fas fa-arrow-left"></i> Kembali</a>
                                 @if ($userr->vote)
                                     <button type="submit" class="btn btn-danger text-white"disabled>
-                                        <i class="fas fa-times"></i> Closed
+                                        <i class="fas fa-times"></i> Ditutup
                                     </button>
                                 @else
                                     <form action="/home/vote/{{ $candidate->id }}" method="POST">
                                         @csrf
-                                        <button type="submit" class="btn btn-warning text-white" onclick="return confirm('Apakah Yakin Untuk Memilih Pasangan Ini?')">
+                                        <button type="submit" class="btn btn-success text-white" onclick="return confirm('Apakah Anda yakin untuk memilih pasangan ini?')">
                                             <i class="fas fa-user-check"></i> Pilih
                                         </button>
                                     </form>

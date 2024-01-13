@@ -1,6 +1,6 @@
 @if ($userr->vote)
     <div class="d-sm-flex align-items-center justify-content-between mb-4">
-        <h1 class="h3 mb-0 text-gray-800">Terima Kasih Sudah Berpartisipasi, Pilihan Anda Adalah</h1>
+        <h4 class="h4 mb-0 text-primary font-weight-bold">Terima Kasih Sudah Berpartisipasi, Pilihan Anda Adalah</h4>
     </div>
     <div class="row">
         <div class="col-md-6">
@@ -14,7 +14,7 @@
                             <img src="{{ asset('img/default.jpg') }}" class="card-img-top rounded-circle" alt="Default Image">
                         @endif
                         <div class="text-center mt-3">
-                            <p>{{ $selectedCandidate->ketua->name }}<br>{{ $selectedCandidate->ketua->nim }}</p>
+                            <p class="font-weight-bold">{{ $selectedCandidate->ketua->name }}<br>{{ $selectedCandidate->ketua->nim }}</p>
                         </div>
                     </div>
                     <div class="col-md-6">
@@ -25,7 +25,7 @@
                             <img src="{{ asset('img/default.jpg') }}" class="card-img-top rounded-circle" alt="Default Image">
                         @endif
                         <div class="text-center mt-3">
-                            <p>{{ $selectedCandidate->wakil->name }}<br>{{ $selectedCandidate->wakil->nim }}</p>
+                            <p class="font-weight-bold">{{ $selectedCandidate->wakil->name }}<br>{{ $selectedCandidate->wakil->nim }}</p>
                         </div>
                     </div>
                 </div>
