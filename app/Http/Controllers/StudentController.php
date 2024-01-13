@@ -104,24 +104,30 @@ class StudentController extends Controller
         $user = auth()->user();
 
         $voteData = Vote::where('user_id', $user->id)->first();
-        $integrationData = [
-            'user_id' => $voteData->user_id,
-            'candidate_id' => $voteData->candidate_id,
-            'created_at' => $voteData->created_at,
-            'updated_at' => $voteData->updated_at
-        ];
-        $integrationCode = hash('sha224', json_encode($integrationData));
-
-        $inputToken = $request->integrasi;
-
-        if ($inputToken === $integrationCode) {
-            $downloadUrl = route('download-certificate', ['token' => $inputToken]);
-
-            return redirect('/cek-integrasi')
-                ->with('success', 'Tervalidasi')
-                ->with('downloadUrl', $downloadUrl);
-        } else {
-            return redirect('/cek-integrasi')->with('error', 'Tidak Tervalidasi');
+        if($voteData == null){
+            return redirect('/cek-integrasi')->with('error', 'Tidak Tervalidasi. Anda mungkin belum melakukan voting. Terdapat kesalahan?');
         }
+        else{
+            $integrationData = [
+                'user_id' => $voteData->user_id,
+                'candidate_id' => $voteData->candidate_id,
+                'created_at' => $voteData->created_at,
+                'updated_at' => $voteData->updated_at
+            ];
+            $integrationCode = hash('sha224', json_encode($integrationData));
+    
+            $inputToken = $request->integrasi;
+    
+            if ($inputToken === $integrationCode) {
+                $downloadUrl = route('download-certificate', ['token' => $inputToken]);
+    
+                return redirect('/cek-integrasi')
+                    ->with('success', 'Tervalidasi. Integritas data anda aman.')
+                    ->with('downloadUrl', $downloadUrl);
+            } else {
+                return redirect('/cek-integrasi')->with('error', 'Tidak tervalidasi. Pastikan anda memasukkan token yang tepat. Terdapat masalah?');
+            }
+        }
+
     }
 }
