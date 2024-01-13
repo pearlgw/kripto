@@ -21,6 +21,7 @@
                     Kemudian akan muncul tombol unduh sertifikat, lalu di unduh</p>
 
 
+
                 <form action="/cek-integrasi" method="POST">
                     @csrf
                     <div class="mb-3">
@@ -29,10 +30,11 @@
                     </div>
                     <button type="submit" class="btn btn-primary">Cek Validasi</button>
                     <a href="/home" class="btn btn-secondary">Kembali</a>
+                    <a href="/student" class="btn btn-secondary">Kembali</a>
+                    @if (session('downloadUrl'))
+                        <a href="{{ session('downloadUrl') }}" class="btn btn-warning">Unduh Sertifikat</a>
+                    @endif
                 </form>
-                @if (session('downloadUrl'))
-                    <a href="{{ session('downloadUrl') }}" class="btn btn-warning mt-2">Unduh Sertifikat</a>
-                @endif
             </div>
         </div>
     </div>

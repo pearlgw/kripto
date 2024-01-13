@@ -16,6 +16,7 @@ class AdminKandidatController extends Controller
     public function index()
     {
         return view('admin.kandidat.index', [
+            'title' => 'Kandidat',
             'user' => auth()->user()->name,
             'candidates' => Candidate::all(),
             'image' => auth()->user()->image,
@@ -35,6 +36,7 @@ class AdminKandidatController extends Controller
             ->get();
 
         return view('admin.kandidat.create', [
+            'title' => 'Tambah Kandidat',
             'user' => auth()->user()->name,
             'students' => $students,
             'image' => auth()->user()->image,
@@ -78,6 +80,7 @@ class AdminKandidatController extends Controller
     public function show($slug)
     {
         return view('admin.kandidat.show', [
+            'title' => 'Detail Kandidat',
             'candidate' => Candidate::where('slug', $slug)->firstOrFail(),
             'user' => auth()->user()->name,
             'userr' => auth()->user(),
@@ -91,6 +94,7 @@ class AdminKandidatController extends Controller
     public function edit($slug)
     {
         return view('admin.kandidat.edit', [
+            'title' => 'Edit Kandidat',
             'kandidat' => Candidate::where('slug', $slug)->first(),
             'mahasiswa' => User::where('role', '!=', 'admin')->get(),
             'user' => auth()->user()->name,

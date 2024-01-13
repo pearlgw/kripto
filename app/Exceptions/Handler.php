@@ -27,4 +27,30 @@ class Handler extends ExceptionHandler
             //
         });
     }
+
+    public function render($request, Throwable $exception)
+    {
+        try {
+            if ($this->isHttpException($exception)) {
+                return $this->renderHttpException($exception);
+            } elseif ($exception instanceof \Illuminate\Database\Eloquent\ModelNotFoundException) {
+                return $this->renderErrorView('404', 'Not Found');
+            } else {
+                return $this->renderErrorView('500', 'Server Error');
+            }
+        } catch (\Exception $e) {
+            dd($e->getMessage());
+        }
+    }
+
+    protected function renderErrorView($statusCode, $message)
+    {
+        return response()->view('error.errorpage', [
+            'title' => $statusCode,
+            'statusCode' => $statusCode,
+            'message' => $message,
+            'user' => auth()->user()->name,
+            'image' => auth()->user()->image,
+        ]);
+    }
 }
