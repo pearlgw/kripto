@@ -33,7 +33,7 @@ class AuthController extends Controller
 
         // jika email atau password salah
         // kirimkan session error
-        return back()->with('error', 'nim atau password salah');
+        return back()->with('error', 'NIM atau password salah');
     }
 
     public function logout(Request $request) {

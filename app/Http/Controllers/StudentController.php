@@ -82,7 +82,7 @@ class StudentController extends Controller
                 new IntegrationMail($integrationCode, $user)
             );
 
-            return redirect('/home')->with('success', 'Successfuly');
+            return redirect('/home')->with('success', 'Sukses! Suara anda berhasil diproses');
         }
     }
 
