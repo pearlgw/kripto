@@ -30,7 +30,6 @@
             height: 500px;
             margin: 0 auto;
             background-color: #0c4c94;
-            
         }
 
         .header {

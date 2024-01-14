@@ -1,13 +1,17 @@
-<ul class="navbar-nav bg-primary sidebar sidebar-dark accordion" id="accordionSidebar">
+<ul class="navbar-nav bg-white sidebar sidebar-light accordion" id="accordionSidebar">
 
     <!-- Sidebar - Brand -->
-    <a class="sidebar-brand d-flex align-items-center justify-content-center" href="/admin">
+    <a class="sidebar-brand d-flex align-items-center justify-content-center" href="/">
         <div class="sidebar-brand-icon">
             {{-- <i class="fas fa-laugh-wink"></i> --}}
-            <img src="{{ asset('img/evoku_u.png') }}" alt="Udinus" width="30%">
+            <img class="ulogo" src="{{ asset('img/evoku_u.png') }}" alt="Udinus" width="30%" >
+            <style>
+                .ulogo:hover{width:32%;}
+                .ulogo{transition: 0.1s;}
+            </style>
+            {{-- <div class="sidebar-brand-text mx-3">E-Voku</div> --}}
         </div>
         {{-- <div class="sidebar-brand-text mx-3">E-Voku <sup>Dinus</sup></div> --}}
-        <div class="sidebar-brand-text mx-3">E-Voku</div>
     </a>
 
     <!-- Divider -->
@@ -17,7 +21,7 @@
         @if (auth()->user()->role === 'admin')
             <!-- Nav Item - Dashboard -->
             <li class="nav-item active">
-                <a class="nav-link" href="/admin">
+                <a class="nav-link text-dark" href="/admin">
                     <i class="fas fa-fw fa-tachometer-alt"></i>
                     <span>Dashboard</span>
                 </a>
@@ -32,15 +36,15 @@
             </div>
 
             <li class="nav-item active">
-                <a class="nav-link" href="/mahasiswa">
-                    <i class="fas fa-user"></i>
+                <a class="nav-link text-dark" href="/mahasiswa">
+                    <i class="fas fa-user text-dark"></i>
                     <span>Mahasiswa</span>
                 </a>
             </li>
 
             <li class="nav-item active">
-                <a class="nav-link" href="/kandidat">
-                    <i class="fas fa-users"></i>
+                <a class="nav-link text-dark" href="/kandidat">
+                    <i class="fas fa-users text-dark"></i>
                     <span>Kandidat</span>
                 </a>
             </li>
@@ -55,15 +59,15 @@
 
         @elseif (auth()->user()->role === 'student')
             <li class="nav-item active">
-                <a class="nav-link" href="/home">
-                    <i class="fas fa-fw fa-home"></i>
+                <a class="nav-link text-dark" href="/home">
+                    <i class="fas fa-fw fa-home text-dark"></i>
                     <span>Home</span>
                 </a>
             </li>
 
             <li class="nav-item active">
-                <a class="nav-link" href="/cek-integrasi">
-                    <i class="fas fa-money-check"></i>
+                <a class="nav-link text-dark" href="/cek-integrasi">
+                    <i class="bi bi-patch-check-fill text-dark"></i>
                     <span>Cek Integrasi</span>
                 </a>
             </li>
