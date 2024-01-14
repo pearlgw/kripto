@@ -141,7 +141,7 @@
                                     </div>
                                 </div>
                                 <div class="card-footer">
-                                    <small class="text-body-secondary">Last updated {{ $candidate->getLastVoteTime() }}</small>
+                                    <small class="text-body-secondary">Terakhir diperbarui: {{ $candidate->getLastVoteTime() }}</small>
                                 </div>
                             </div>
                         </div>

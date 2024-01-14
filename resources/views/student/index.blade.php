@@ -37,7 +37,7 @@
 
     <div class="card shadow mb-4">
         <div class="card-body" style="border-radius: 100px">
-            <h3 class="my-4 font-weight-bold text-primary text-center">Selamat Datang {{ $user }}, E-Vote UDINUS!</h3>
+            <h3 class="my-4 font-weight-bold text-primary text-center">Selamat Datang di Evoku, {{ $user }}!</h3>
         </div>
     </div>
 
