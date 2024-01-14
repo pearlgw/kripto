@@ -4,7 +4,7 @@
     <a class="sidebar-brand d-flex align-items-center justify-content-center" href="/">
         <div class="sidebar-brand-icon">
             {{-- <i class="fas fa-laugh-wink"></i> --}}
-            <img class="ulogo" src="{{ asset('img/u.png') }}" alt="Udinus" width="30%" >
+            <img class="ulogo" src="{{ asset('img/evoku_u.png') }}" alt="Udinus" width="30%" >
             <style>
                 .ulogo:hover{width:32%;}
                 .ulogo{transition: 0.1s;}
