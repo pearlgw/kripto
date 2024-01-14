@@ -29,7 +29,7 @@
             width: 800px;
             height: 500px;
             margin: 0 auto;
-            background-color: #1616de;
+            background-color: #0c4c94;
             
         }
 
@@ -37,13 +37,13 @@
             font-size: 24px;
             font-weight: bold;
             margin-bottom: 10px;
-            color: #F4D03F;
+            color: #f4bc44;
         }
 
         .content {
             font-size: 20px;
             margin-bottom: 30px;
-            color: #F4D03F;
+            color: #f4bc44;
             font-family: 'Lemon', sans-serif;
         }
         .content strong {
@@ -56,7 +56,7 @@
             margin-right: 20px; /* Sesuaikan dengan jarak dari kanan */
             font-size: 18px;
             font-family:'Lemon', sans-serif;
-            color: #F4D03F;
+            color: #f4bc44;
         }
 
     </style>
@@ -71,7 +71,7 @@
             Atas partisipasinya pada Pemilihan Umum DPM-KM<br>Universitas Dian Nuswantoro.<br><br>
             @if($selectedCandidate)
             Anda telah melakukan pemilihan pada kandidat nomor urut {{ $selectedCandidate->status }}<br>
-            pada {{ \Carbon\Carbon::parse($selectedCandidate->getLastVoteTime())->locale('id_ID')->isoFormat('dddd, D MMMM YYYY') }}<br>
+            pada {{ $voteTime }}<br>
             @else
             Anda belum memilih kandidat.
             @endif
