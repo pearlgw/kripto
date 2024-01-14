@@ -43,7 +43,7 @@
                                 @endif
                             </td>
                             <td style="vertical-align: middle;">
-                                <a href="/mahasiswa/{{ $usr->slug }}" class="badge bg-primary text-light"><i class="fas fa-eye"></i></a>
+                                <a href="/mahasiswa/{{ $usr->slug }}" class="badge bg-primary text-light"><i class="bi bi-info-circle-fill"></i></a>
                                 <a href="/mahasiswa/{{ $usr->slug }}/edit" class="badge bg-warning text-dark"><i class="fas fa-edit"></i></a>
                                 <form action="/mahasiswa/{{ $usr->slug}}" method="POST" class="d-inline">
                                     @csrf
