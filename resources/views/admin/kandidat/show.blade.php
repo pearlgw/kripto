@@ -45,8 +45,8 @@
                             <p class="text-justify">{!! $candidate->misi !!}</p>
                             <h4 class="text-weight-bold text-center mt-4">Program Kerja</h4>
                             <p class="text-justify">{!! $candidate->program_kerja !!}</p>
-                            <h4 class="text-weight-bold text-center mt-4">Experience</h4>
-                            <p class="text-justify">{!! $candidate->experience !!}</p>
+                            <h4 class="text-weight-bold text-center mt-4">Pengalaman</h4>
+                            <p class="text-justify">{!! $candidate->experience!!}</p>
                         </div>
                         <div class="card-body d-flex justify-content-center">
                             <a href="/kandidat" class="btn btn-success mx-1"><i class="fas fa-arrow-left"></i> Kembali</a>
