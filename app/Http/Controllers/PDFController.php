@@ -14,11 +14,13 @@ class PDFController extends Controller
 
         // Mengambil informasi kandidat terpilih oleh pengguna
         $selectedCandidate = $user->vote ? $user->vote->candidate : null;
+        $voteTime = $user->vote->created_at;
 
         // Load view sertifikat dengan data pengguna dan kandidat terpilih
         $pdf = PDF::loadView('student.sertifikat', [
             'user' => $userName,
             'selectedCandidate' => $selectedCandidate,
+            'voteTime' => $voteTime,
         ]);
 
 

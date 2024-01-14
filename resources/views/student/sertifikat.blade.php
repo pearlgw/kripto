@@ -30,7 +30,6 @@
             height: 500px;
             margin: 0 auto;
             background-color: #1616de;
-            
         }
 
         .header {
@@ -71,7 +70,7 @@
             Atas partisipasinya pada Pemilihan Umum DPM-KM<br>Universitas Dian Nuswantoro.<br><br>
             @if($selectedCandidate)
             Anda telah melakukan pemilihan pada kandidat nomor urut {{ $selectedCandidate->status }}<br>
-            pada {{ \Carbon\Carbon::parse($selectedCandidate->getLastVoteTime())->locale('id_ID')->isoFormat('dddd, D MMMM YYYY') }}<br>
+            pada {{ $voteTime }}<br>
             @else
             Anda belum memilih kandidat.
             @endif
