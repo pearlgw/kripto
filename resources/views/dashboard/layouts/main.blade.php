@@ -71,16 +71,16 @@
         <div class="modal-dialog modal-dialog-centered" role="document">
             <div class="modal-content">
                 <div class="modal-header bg-primary text-white">
-                    <h5 class="modal-title" id="exampleModalLabel">Yakin kak {{ $user }} ingin keluar?</h5>
+                    <h5 class="modal-title" id="exampleModalLabel">Apakah anda yakin ingin keluar?</h5>
                     <button class="close text-white" type="button" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
                 </div>
                 <div class="modal-body">
-                    <p class="text-dark">Pilih <b>"Keluar"</b> untuk keluar dari aplikasi</p>
+                    <p class="text-dark">Pilih <b>Keluar</b> untuk keluar dari aplikasi</p>
                 </div>
                 <div class="modal-footer">
-                    <button class="btn btn-secondary" type="button" data-dismiss="modal">Batalkan</button>
+                    <button class="btn btn-secondary" type="button" data-dismiss="modal">Batal</button>
                     <form action="/logout" method="post">
                         @csrf
                         <button type="submit" class="btn btn-danger">Keluar</button>
