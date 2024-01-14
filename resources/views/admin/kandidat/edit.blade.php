@@ -65,14 +65,14 @@
             <trix-editor input="program_kerja"></trix-editor>
         </div>
         <div class="mb-3">
-            <label for="experience" class="form-label">Experience</label>
+            <label for="experience" class="form-label">Pengalaman</label>
                 @error('experience')
                     <p class="text-danger">{{ $message }}</p>
                 @enderror
             <input id="experience" type="hidden" name="experience" value="{{ old('experience', $kandidat->experience) }}">
             <trix-editor input="experience"></trix-editor>
         </div>
-        <button type="submit" class="btn btn-primary">Update</button>
+        <button type="submit" class="btn btn-primary">Perbarui</button>
     </form>
 
 @endsection

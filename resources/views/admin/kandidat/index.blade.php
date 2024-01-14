@@ -8,8 +8,8 @@
         </div>
     @endif
     <div class="card-header py-3 d-flex justify-content-between align-items-center">
-        <h3 class="m-0 font-weight-bold text-primary">Data Candidate</h3>
-        <a href="/kandidat/create" class="btn btn-primary d-block">Create New Candidate</a>
+        <h3 class="m-0 font-weight-bold text-primary">Data Kandidat</h3>
+        <a href="/kandidat/create" class="btn btn-primary d-block">Tambah Kandidat Baru</a>
     </div>
     <div class="card-body">
         <div class="row">
@@ -42,12 +42,12 @@
                             </div>
                         </div>
                         <div class="card-body d-flex justify-content-center">
-                            <a href="/kandidat/{{ $candidate->slug }}" class="btn btn-info mx-1"><i class="fas fa-eye"></i> Show</a>
+                            <a href="/kandidat/{{ $candidate->slug }}" class="btn btn-info mx-1"><i class="fas fa-eye"></i> Lihat</a>
                             <a href="/kandidat/{{ $candidate->slug }}/edit" class="btn btn-warning mx-1"><i class="fas fa-edit"></i> Edit</a>
                             <form action="/kandidat/{{ $candidate->id }}" method="POST" class="d-inline">
                                 @csrf
                                 @method('delete')
-                                <button type="submit" class="btn btn-danger text-white mx-1" onclick="return confirm('Apakah Yakin Untuk Dihapus?')"><i class="fas fa-trash-alt"></i> Hapus</button>
+                                <button type="submit" class="btn btn-danger text-white mx-1" onclick="return confirm('Yakin hapus kandidat?')"><i class="fas fa-trash-alt"></i> Hapus</button>
                             </form>
                         </div>
                     </div>

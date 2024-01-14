@@ -16,7 +16,7 @@
                     <div class="card bg-primary border-0 mx-auto text-white p-3">
                         <div class="container">
                             @if ($users->image)
-                                <img src="{{ asset('storage/' . $users->image) }}" width="50%" class="rounded-circle mx-auto d-block pb-4">
+                                <img src="{{ asset('public/storage/' . $users->image) }}" width="50%" class="rounded-circle mx-auto d-block pb-4">
                             @else
                                 <img src="{{ asset('img/default.jpg') }}" width="50%" class="rounded-circle mx-auto d-block pb-4">
                             @endif
@@ -31,7 +31,7 @@
                                 <form action="/mahasiswa/{{ $users->slug }}" method="POST" class="d-inline">
                                     @csrf
                                     @method('delete')
-                                    <button type="submit" class="btn btn-danger text-white mx-1" onclick="return confirm('Apakah Yakin Untuk Dihapus?')"><i class="fas fa-trash-alt"></i> Hapus</button>
+                                    <button type="submit" class="btn btn-danger text-white mx-1" onclick="return confirm('Yakin hapus data?')"><i class="fas fa-trash-alt"></i> Hapus</button>
                                 </form>
                             </div>
                         </div>

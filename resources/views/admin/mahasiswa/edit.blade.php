@@ -2,7 +2,7 @@
 
 @section('thisContent')
     <div class="d-sm-flex align-items-center justify-content-between mb-4">
-        <h1 class="h3 mb-0 text-gray-800">Form Edit Student</h1>
+        <h1 class="h3 mb-0 text-gray-800">Form Edit Mahasiswa</h1>
     </div>
     <form action="/mahasiswa/{{ $student->slug }}" method="POST" style="width: 50%" enctype="multipart/form-data">
         @method('put')
@@ -18,7 +18,7 @@
             @enderror
         </div>
         <div class="mb-3">
-            <label for="name" class="form-label">Name</label>
+            <label for="name" class="form-label">Nama</label>
             <input type="text" name="name" class="form-control @error('name') is-invalid @enderror" id="name" value="{{ old('name', $student->name) }}" required>
             @error('name')
                 <div class="invalid-feedback">
@@ -45,7 +45,7 @@
             @enderror
         </div>
         <div class="mb-3">
-            <label for="phone_number" class="form-label">Phone Number</label>
+            <label for="phone_number" class="form-label">No. Hp</label>
             <input type="text" name="phone_number" class="form-control @error('phone_number') is-invalid @enderror" id="phone_number" value="{{ old('phone_number', $student->phone_number) }}">
             @error('phone_number')
                 <div class="invalid-feedback">
@@ -63,7 +63,7 @@
             @enderror
         </div>
         <div class="mb-3">
-            <label for="image" class="form-label">Post Image</label>
+            <label for="image" class="form-label">Unggah Gambar</label>
             @if ($student->image)
                 <img src="{{ asset('storage/' . $student->image) }}" width="200px" class="img-preview img-fluid mb-3 d-block">
             @else
@@ -76,7 +76,7 @@
                 </div>
             @enderror
         </div>
-        <button type="submit" class="btn btn-primary">Update Data</button>
+        <button type="submit" class="btn btn-primary">Perbarui Data</button>
     </form>
 
     <script>

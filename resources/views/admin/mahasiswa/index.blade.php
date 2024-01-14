@@ -8,8 +8,8 @@
         </div>
     @endif
     <div class="card-header py-3 d-flex justify-content-between align-items-center">
-        <h3 class="m-0 font-weight-bold text-primary">Data Student</h3>
-        <a href="/mahasiswa/create" class="btn btn-primary d-block">Create New Student</a>
+        <h3 class="m-0 font-weight-bold text-primary">Data Mahasiswa</h3>
+        <a href="/mahasiswa/create" class="btn btn-primary d-block">Tambah Mahasiswa Baru</a>
     </div>
     <div class="card-body">
         <div class="table-responsive">
@@ -18,12 +18,12 @@
                     <tr>
                         <th>No</th>
                         <th>NIM</th>
-                        <th>Name</th>
+                        <th>Nama</th>
                         <th>Email</th>
-                        <th>Phone Number</th>
+                        <th>No. HP</th>
                         <th>Alamat</th>
-                        <th>Image</th>
-                        <th>Action</th>
+                        <th>Gambar</th>
+                        <th>Aksi</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -48,7 +48,7 @@
                                 <form action="/mahasiswa/{{ $usr->slug}}" method="POST" class="d-inline">
                                     @csrf
                                     @method('DELETE')
-                                    <button type="submit" class="badge bg-danger border-0" onclick="return confirm('Apakah Yakin Untuk Dihapus?')">
+                                    <button type="submit" class="badge bg-danger border-0" onclick="return confirm('Yakin hapus data mahasiswa?')">
                                         <i class="fas fa-trash-alt"></i>
                                     </button>
                                 </form>

@@ -17,14 +17,9 @@
                 @endif
 
                 <h2>Cek Integrasi</h2>
-                <p>Masukan token yang sudah dikirim melalui email di dalam form inputan ini, dan klik Cek Validasi. <br>
-                    Kemudian akan muncul tombol unduh sertifikat, lalu di unduh</p>
+                <p>Masukan token yang sudah dikirim melalui email pada form inputan ini, dan klik Cek Validasi. <br>
+                    Kemudian unduh sertifikat tersebut pada tombol unduh sertifikat berikut.</p>
 
-<<<<<<< Updated upstream
-
-
-=======
->>>>>>> Stashed changes
                 <form action="/cek-integrasi" method="POST">
                     @csrf
                     <div class="mb-3">
@@ -32,7 +27,6 @@
                         <input type="text" class="form-control" name="integrasi" id="integrasi">
                     </div>
                     <button type="submit" class="btn btn-primary">Cek Validasi</button>
-                    <a href="/home" class="btn btn-secondary">Kembali</a>
                     <a href="/student" class="btn btn-secondary">Kembali</a>
                     @if (session('downloadUrl'))
                         <a href="{{ session('downloadUrl') }}" class="btn btn-warning">Unduh Sertifikat</a>
