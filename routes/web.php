@@ -59,3 +59,21 @@ Route::group(['middleware' => ['auth', 'checkrole:student']], function() {
 Route::get('/dashboard', function(){
     return view('dashboard.layouts.main');
 });
+
+Route::middleware(['auth', 'checkrole:student'])->group(function () {
+    Route::fallback(function(){
+        return view('student.index');
+    });
+});
+
+Route::middleware(['auth', 'checkrole:admin'])->group(function () {
+    Route::fallback(function(){
+        return view('admin.index');
+    });
+});
+
+Route::middleware('guest')->group(function () {
+    Route::fallback(function(){
+        return view('auth.login');
+    });
+});
