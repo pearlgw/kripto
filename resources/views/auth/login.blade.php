@@ -2,17 +2,26 @@
 
 @section('content')
     <div class="d-flex justify-content-center align-items-center vh-100">
+        <div class="text-center">
+            <img src="{{ asset('img/udinus.png') }}" alt="udinus" width="30%" class="mb-5">
+            <h4 style="font-family: 'Homemade Apple', cursive;" class="text-light">For a Better Future</h4>
+        </div>
+        
         <div class="card" style="width: 25rem;">
             <div class="text-center mt-5">
-                <img src="{{ asset('img/udinus.png') }}" alt="udinus" width="20%" class="ulogo">
                 <img src="{{ asset('img/evoku.png') }}" alt="evoku" width="30%" class="ulogo ml-3">
                 {{-- <img src="{{ asset('img/evoku.png') }}" alt="Udinus" width="30%" class="ulogo mt-3"> --}}
                 <h4 class="mt-3 font-weight-bold text-primary">E-Voting Kampus Udinus</h4>
                 <style>
                     /* .ulogo:hover{width: 32%;} */
                     /* .ulogo{transition: 0.3s;} */
-                    .sbmlog:hover{transform: scale(1.03,1.03)}
-                    .sbmlog{transition: 0.2s}
+                    .sbmlog:hover {
+                        transform: scale(1.03, 1.03)
+                    }
+
+                    .sbmlog {
+                        transition: 0.2s
+                    }
                 </style>
             </div>
 
@@ -48,7 +57,8 @@
                     </div>
 
                     <center>
-                        <button type="submit" class="sbmlog btn btn-primary btn-block rounded-pill font-weight-bold">Masuk</button>
+                        <button type="submit"
+                            class="sbmlog btn btn-primary btn-block rounded-pill font-weight-bold">Masuk</button>
                     </center>
                 </form>
             </div>
