@@ -2,7 +2,7 @@
 
 @section('thisContent')
     <div class="d-sm-flex align-items-center justify-content-between mb-4">
-        <h1 class="h3 mb-0 text-gray-800">Form Edit Student</h1>
+        <h1 class="h3 mb-0 text-gray-800">Form Edit Mahasiswa</h1>
     </div>
     <form action="/kandidat/{{ $kandidat->slug }}" method="POST" enctype="multipart/form-data">
         @method('put')

@@ -32,7 +32,7 @@ class Candidate extends Model
     {
         $latestVote = $this->vote()->latest()->first();
 
-        return $latestVote ? $latestVote->created_at->diffForHumans() : 'No votes yet';
+        return $latestVote ? $latestVote->created_at->diffForHumans() : 'Belum ada suara';
     }
 
     public function getTotalVotes()
