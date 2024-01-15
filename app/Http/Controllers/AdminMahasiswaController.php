@@ -103,6 +103,8 @@ class AdminMahasiswaController extends Controller
 
         $validatedData = $request->validate($rules);
 
+        $validatedData['password'] = bcrypt($validatedData['password']);
+
         if($request->file('image'))
         {
             if($request->oldImage){
