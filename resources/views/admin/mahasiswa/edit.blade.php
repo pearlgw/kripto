@@ -65,9 +65,9 @@
         <div class="mb-3">
             <label for="image" class="form-label">Unggah Gambar</label>
             @if ($student->image)
-                <img src="{{ asset('storage/' . $student->image) }}" width="200px" class="img-preview img-fluid mb-3 d-block">
+                <img src="{{ asset('storage/' . $student->image) }}" width="200px" class="img-preview img-fluid mb-3 d-block" style="border-radius: 20px;">
             @else
-                <img class="img-preview img-fluid mb-3" width="200px">
+                <img class="img-preview img-fluid mb-3" width="200px" style="border-radius: 20px;">
             @endif
             <input class="form-control @error('image') is-invalid @enderror" type="file" id="image" name="image" onchange="previewImage()">
             @error('image')

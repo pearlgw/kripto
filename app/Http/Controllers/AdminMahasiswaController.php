@@ -98,20 +98,22 @@ class AdminMahasiswaController extends Controller
             'email' => 'required|email',
             'phone_number' => 'required|min:11|max:15',
             'alamat' => 'required',
-            'image' => 'required|file|max:1024'
+            'image' => 'file|max:1024'
         ];
 
         $validatedData = $request->validate($rules);
+
         if($request->file('image'))
         {
             if($request->oldImage){
                 Storage::delete($request->oldImage);
+                $validatedData['image'] = $request->file('image')->store('post-images');
             }
-            $validatedData['image'] = $request->file('image')->store('post-images');
         }
 
         User::where('slug', $slug)->update($validatedData);
         return redirect('/mahasiswa')->with('success', 'Berhasil Update');
+
     }
 
     /**

@@ -16,9 +16,9 @@
                     <div class="card bg-primary border-0 mx-auto text-white p-3">
                         <div class="container">
                             @if ($users->image)
-                                <img src="{{ asset('public/storage/' . $users->image) }}" width="50%" class="rounded-circle mx-auto d-block pb-4">
+                                <img src="{{ asset('storage/' . $users->image) }}" class="mx-auto d-block mb-4" style="border-radius: 20px; width: 50%;">
                             @else
-                                <img src="{{ asset('img/default.jpg') }}" width="50%" class="rounded-circle mx-auto d-block pb-4">
+                                <img src="{{ asset('img/default.jpg') }}" class="mx-auto d-block pb-4" style="border-radius: 20px; width: 50%;">
                             @endif
                             NIM <div class="font-weight-bold mb-1">{{ $users->nim }}</div>
                             Nama <div class="font-weight-bold mb-1">{{ $users->name }}</div>

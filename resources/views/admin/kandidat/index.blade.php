@@ -21,9 +21,9 @@
                             <div class="col-md-6">
                                 <h5 class="text-center mb-3">Calon Ketua</h5>
                                 @if ($candidate->ketua->image)
-                                    <img src="{{ asset('storage/' . $candidate->ketua->image) }}" class="card-img-top rounded-circle" alt="{{ $candidate->ketua->name }}">
+                                    <img src="{{ asset('storage/' . $candidate->ketua->image) }}" class="card-img-top" alt="{{ $candidate->ketua->name }}" style="border-radius: 20px;">
                                 @else
-                                    <img src="{{ asset('img/default.jpg') }}" class="card-img-top rounded-circle" alt="Default Image">
+                                    <img src="{{ asset('img/default.jpg') }}" class="card-img-top" alt="Default Image" style="border-radius: 20px;">
                                 @endif
                                 <div class="text-center mt-3">
                                     <p>{{ $candidate->ketua->name }}<br>{{ $candidate->ketua->nim }}</p>
@@ -32,9 +32,9 @@
                             <div class="col-md-6">
                                 <h5 class="text-center mb-3">Calon Wakil</h5>
                                 @if ($candidate->wakil->image)
-                                    <img src="{{ asset('storage/' . $candidate->wakil->image) }}" class="card-img-top rounded-circle" alt="{{ $candidate->wakil->name }}">
+                                    <img src="{{ asset('storage/' . $candidate->wakil->image) }}" class="card-img-top" style="border-radius: 20px;" alt="{{ $candidate->wakil->name }}">
                                 @else
-                                    <img src="{{ asset('img/default.jpg') }}" class="card-img-top rounded-circle" alt="Default Image">
+                                    <img src="{{ asset('img/default.jpg') }}" class="card-img-top" style="border-radius: 20px;" alt="Default Image">
                                 @endif
                                 <div class="text-center mt-3">
                                     <p>{{ $candidate->wakil->name }}<br>{{ $candidate->wakil->nim }}</p>
@@ -53,7 +53,7 @@
                                 <button type="button" class="btn btn-danger text-white mx-1" data-toggle="modal" data-target="#exampleModalCenter{{ $candidate->id }}">
                                     Hapus
                                 </button>
-                                
+
                                 <!-- Modal -->
                                 <div class="modal fade" id="exampleModalCenter{{ $candidate->id }}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
                                     <div class="modal-dialog" role="document">
