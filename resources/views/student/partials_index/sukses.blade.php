@@ -15,9 +15,9 @@
                     <div class="col-md-6">
                         <h5 class="text-center mb-3">Calon Ketua</h5>
                         @if ($selectedCandidate->ketua->image)
-                            <img src="{{ asset('storage/' . $selectedCandidate->ketua->image) }}" class="card-img-top rounded-circle" alt="{{ $selectedCandidate->ketua->name }}">
+                            <img src="{{ asset('storage/' . $selectedCandidate->ketua->image) }}" class="card-img-top" style="border-radius: 20px;" alt="{{ $selectedCandidate->ketua->name }}">
                         @else
-                            <img src="{{ asset('img/default.jpg') }}" class="card-img-top rounded-circle" alt="Default Image">
+                            <img src="{{ asset('img/default.jpg') }}" class="card-img-top" style="border-radius: 20px;" alt="Default Image">
                         @endif
                         <div class="text-center mt-3">
                             <p class="font-weight-bold">{{ $selectedCandidate->ketua->name }}</p>
@@ -27,9 +27,9 @@
                     <div class="col-md-6">
                         <h5 class="text-center mb-3">Calon Wakil</h5>
                         @if ($selectedCandidate->wakil->image)
-                            <img src="{{ asset('storage/' . $selectedCandidate->wakil->image) }}" class="card-img-top rounded-circle" alt="{{ $selectedCandidate->wakil->name }}">
+                            <img src="{{ asset('storage/' . $selectedCandidate->wakil->image) }}" class="card-img-top" style="border-radius: 20px;" alt="{{ $selectedCandidate->wakil->name }}">
                         @else
-                            <img src="{{ asset('img/default.jpg') }}" class="card-img-top rounded-circle" alt="Default Image">
+                            <img src="{{ asset('img/default.jpg') }}" class="card-img-top" style="border-radius: 20px;" alt="Default Image">
                         @endif
                         <div class="text-center mt-3">
                             <p class="font-weight-bold">{{ $selectedCandidate->wakil->name }}</p>

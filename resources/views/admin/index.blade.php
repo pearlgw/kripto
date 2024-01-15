@@ -114,17 +114,17 @@
                                         <div class="col">
                                             Calon Ketua: <div class="font-weight-bold text-primary text-uppercase mb-1">{{ $candidate->ketua->name }}</div>
                                             @if ($candidate->ketua->image)
-                                                <img src="{{ asset('storage/' . $candidate->ketua->image) }}" class="card-img-top rounded-circle" alt="{{ $candidate->ketua->name }}" style="width: 30%">
+                                                <img src="{{ asset('storage/' . $candidate->ketua->image) }}" class="card-img-top" alt="{{ $candidate->ketua->name }}" style="width: 30%; border-radius: 20px;">
                                             @else
-                                                <img src="{{ asset('img/default.jpg') }}" class="card-img-top rounded-circle" alt="Default Image" style="width: 30%">
+                                                <img src="{{ asset('img/default.jpg') }}" class="card-img-top" alt="Default Image" style="width: 30%; border-radius: 20px;">
                                             @endif
                                         </div>
                                         <div class="col">
                                             Calon Wakil: <div class="font-weight-bold text-primary text-uppercase mb-1">{{ $candidate->wakil->name }}</div>
                                             @if ($candidate->wakil->image)
-                                                <img src="{{ asset('storage/' . $candidate->wakil->image) }}" class="card-img-top rounded-circle" alt="{{ $candidate->wakil->name }}" style="width: 30%">
+                                                <img src="{{ asset('storage/' . $candidate->wakil->image) }}" class="card-img-top" alt="{{ $candidate->wakil->name }}" style="width: 30%; border-radius: 20px;">
                                             @else
-                                                <img src="{{ asset('img/default.jpg') }}" class="card-img-top rounded-circle" alt="Default Image" style="width: 30%">
+                                                <img src="{{ asset('img/default.jpg') }}" class="card-img-top" alt="Default Image" style="width: 30%; border-radius: 20px;">
                                             @endif
                                         </div>
                                         <div class="col-auto">
