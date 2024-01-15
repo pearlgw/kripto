@@ -106,7 +106,7 @@ class StudentController extends Controller
 
         $voteData = Vote::where('user_id', $user->id)->first();
         if($voteData == null){
-            return redirect('/cek-integrasi')->with('error', 'Error: Data pengguna tidak ditemukan. Jika Anda sudah memilih, mungkin ada masalah. Hubungi dukungan untuk mendapatkan bantuan.');
+            return redirect('/cek-integrasi')->with('error', 'Error: Data suara tidak ditemukan. Jika Anda sudah memilih, mungkin ada masalah. Silakan laporkan untuk mendapatkan bantuan.');
         }
         else if((strlen($inputToken) < 56) || (strlen($inputToken) > 56)){
             return redirect('/cek-integrasi')->with('error', 'Error: Panjang token salah. Pastikan Anda telah memasukkan token dengan panjang 56 karakter.');
