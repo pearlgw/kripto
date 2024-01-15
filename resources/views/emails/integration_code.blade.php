@@ -1,4 +1,4 @@
-<p>Terima Kasih {{ $user->name }} telah berpartisipasi dalam pemilihan Ketua dan Wakil DPM-KM Udinus</p>
+<p>Terima Kasih {{ $user->name }} telah berpartisipasi dalam pemilihan Ketua dan Wakil Ketua DPM-KM Udinus</p>
 <p>Berikut adalah kode integrasi Anda:</p>
 <p>{{ $integrationCode }}</p>
 <p>Silahkan cek di web, menu "Cek Integrasi", untuk bisa mendownload sertifikat legalitas PEMILU.</p>

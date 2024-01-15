@@ -2,14 +2,14 @@
 
 @section('content')
     <div class="d-flex justify-content-center align-items-center vh-100">
-        <div class="text-center">
-            <img src="{{ asset('img/udinus.png') }}" alt="udinus" width="30%" class="mb-5">
+        <div class="text-center" style="width: 25rem">
+            <img src="{{ asset('img/udinus.png') }}" alt="udinus" width="35%" class="mb-5 text-center">
             <h4 style="font-family: 'Homemade Apple', cursive;" class="text-light">For a Better Future</h4>
         </div>
-        
-        <div class="card" style="width: 25rem;">
+
+        <div class="card" style="width: 25rem; margin: 70px">
             <div class="text-center mt-5">
-                <img src="{{ asset('img/evoku.png') }}" alt="evoku" width="30%" class="ulogo ml-3">
+                <img src="{{ asset('img/evoku.png') }}" alt="evoku" width="30%" class="ulogo">
                 {{-- <img src="{{ asset('img/evoku.png') }}" alt="Udinus" width="30%" class="ulogo mt-3"> --}}
                 <h4 class="mt-3 font-weight-bold text-primary">E-Voting Kampus Udinus</h4>
                 <style>
