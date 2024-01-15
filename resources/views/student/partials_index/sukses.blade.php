@@ -44,8 +44,8 @@
                 <div class="card bg-success p-3 text-light">
                     Anda telah berhasil mengikuti voting. Silahkan ikuti panduan di bawah ini.
                 </div>
-                <p class="mt-3">Setelah mendapatkan email maka masukan token anda di menu web <b>Cek integrasi</b>, untuk mengetahui keamanan data pemilihan anda.</p>
-                <p>Kemudian cetak sertifikat sebagai penanda anda telah berpartisipasi</p>
+                <p class="mt-3">Setelah mendapatkan email maka masukan <b>token</b> anda di menu web <i class="bi bi-shield-fill-check"></i> <b> Cek integrasi</b>, untuk mengetahui keamanan data pemilihan anda.</p>
+                <p>Kemudian cetak sertifikat sebagai tanda partisipasi anda dalam pemilihan ini.</p>
                 <p>Terima kasih</p>
                 <a href="/cek-integrasi" class="btn btn-primary" style="width: 20%">
                     <i class="bi bi-shield-fill-check"></i>

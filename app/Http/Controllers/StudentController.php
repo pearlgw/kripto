@@ -100,12 +100,16 @@ class StudentController extends Controller
         $request->validate([
             'integrasi' => 'required',
         ]);
+        $inputToken = $request->integrasi;
 
         $user = auth()->user();
 
         $voteData = Vote::where('user_id', $user->id)->first();
         if($voteData == null){
-            return redirect('/cek-integrasi')->with('error', 'Tidak Tervalidasi. Anda mungkin belum melakukan voting. Terdapat kesalahan?');
+            return redirect('/cek-integrasi')->with('error', 'Error: Data pengguna tidak ditemukan. Jika Anda sudah memilih, mungkin ada masalah. Hubungi dukungan untuk mendapatkan bantuan.');
+        }
+        else if((strlen($inputToken) < 56) || (strlen($inputToken) > 56)){
+            return redirect('/cek-integrasi')->with('error', 'Error: Panjang token salah. Pastikan Anda telah memasukkan token dengan panjang 56 karakter.');
         }
         else{
             $integrationData = [
@@ -122,10 +126,10 @@ class StudentController extends Controller
                 $downloadUrl = route('download-certificate', ['token' => $inputToken]);
     
                 return redirect('/cek-integrasi')
-                    ->with('success', 'Tervalidasi. Integritas data anda aman.')
+                    ->with('success', 'Tervalidasi. Data suara Anda telah diverifikasi dan aman.')
                     ->with('downloadUrl', $downloadUrl);
             } else {
-                return redirect('/cek-integrasi')->with('error', 'Tidak tervalidasi. Pastikan anda memasukkan token yang tepat. Terdapat masalah?');
+                return redirect('/cek-integrasi')->with('error', 'Error. Kami mendeteksi ketidakkonsistenan dalam data suara Anda. Harap verifikasi bahwa Anda memasukkan token yang benar. Terdapat masalah? ');
             }
         }
 
