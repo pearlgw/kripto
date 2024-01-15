@@ -5,13 +5,13 @@
         <div class="card-body" style="border-radius: 100px">
             <div class="container">
                 @if (session('success'))
-                    <div class="alert alert-success alert-dismissible fade show" style="width: 50%" role="alert">
+                    <div class="alert alert-success alert-dismissible fade show" style="width: fit-content;" role="alert">
                         {{ session('success') }}
                     </div>
                 @endif
 
                 @if (session('error'))
-                    <div class="alert alert-danger alert-dismissible fade show" style="width: 60%" role="alert">
+                    <div class="alert alert-danger alert-dismissible fade show" style="width: fit-content;" role="alert">
                         <span>{{ session('error') }}</span>
                         <a href="https://wa.me/6285870254510?" class="btn btn-outline-danger ml-2" target="_blank"><i class="bi bi-flag-fill"></i> Laporkan</a>
                     </div>
