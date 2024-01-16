@@ -105,12 +105,24 @@ class AdminMahasiswaController extends Controller
 
         $validatedData['password'] = bcrypt($validatedData['password']);
 
-        if($request->file('image'))
-        {
-            if($request->oldImage){
+        // if($request->file('image'))
+        // {
+        //     if($request->oldImage){
+        //         Storage::delete($request->oldImage);
+        //         $validatedData['image'] = $request->file('image')->store('post-images');
+        //     }
+        // }
+        // Periksa apakah ada file gambar yang diunggah
+        if ($request->hasFile('image')) {
+            // Jika gambar lama ada, hapus
+            if ($request->oldImage) {
                 Storage::delete($request->oldImage);
-                $validatedData['image'] = $request->file('image')->store('post-images');
             }
+            // Simpan gambar baru
+            $validatedData['image'] = $request->file('image')->store('post-images');
+        }
+        elseif (empty($validatedData['image']) && $request->oldImage) {
+            $validatedData['image'] = $request->oldImage;
         }
 
         User::where('slug', $slug)->update($validatedData);
