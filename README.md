@@ -65,5 +65,35 @@ MAIL_FROM_ADDRESS=(isi sesuai email yang ingin di jadikan base) contoh:"haha@gma
 ## Tampilan Dashboard Admin (candidate) - detail kandidat
 ![evoku-8](https://github.com/pearlgw/kripto/assets/113248009/65f4b5ae-24bd-4ce1-a397-9cc4f2a1e937)
 
+Tampilan Form Login Utama
+
+Tampilan Dashboard Admin
+
+Tampilan Dashboard Admin (student)
+
+Tampilan Dashboard Admin (student)
+
+Tampilan Dashboard Admin (student)
+
+Tampilan Dashboard Admin (student)
+
+Tampilan Dashboard Admin (candidate)
+
+Tampilan Dashboard Admin (candidate)
+
+Tampilan Dashboard Admin (candidate)
+
+Tampilan Dashboard Student
+
+Tampilan Dashboard Student
+
+Tampilan Dashboard Student
+
+Tampilan Setelah Melakukan Vote (Tampilan Dashboard Student)
+
+Tampilan Dashboard Student
+
+Setelah Melakukan Pengecekan Integrasi Yang Di Kirim Dari Email( Tampilan Dashboard Student)
+
 ## Tampilan Dashboard Admin (candidate) - edit kandidat
 ![evoku-9](https://github.com/pearlgw/kripto/assets/113248009/eed8f550-bee2-4145-bb7b-cdd4f5f1872d)
