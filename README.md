@@ -21,48 +21,49 @@ MAIL_ENCRYPTION=tls <br>
 MAIL_FROM_ADDRESS=(isi sesuai email yang ingin di jadikan base) contoh:"haha@gmail.com"<br>
 <hr>
 
-Tampilan Form Login Utama
-![tampilan pertama](laporan/0_form_login.png)
+## Tampilan Form Login Utama
+![evoku-1](https://github.com/pearlgw/kripto/assets/113248009/4d78dc4d-8d97-44b1-89f0-07074a556351)
 
-Tampilan Dashboard Admin
-![tampilan pertama](laporan/1_dashboard_admin.png)
+## Tampilan Dashboard Student
+![evoku-10](https://github.com/pearlgw/kripto/assets/113248009/5c604157-d798-4c01-aa6f-e9004c76d257)
 
-Tampilan Dashboard Admin (student)
-![tampilan pertama](laporan/2_data_student_admin.png)
+## Tampilan Dashboard Student
+![evoku-11](https://github.com/pearlgw/kripto/assets/113248009/5d2de358-6b5b-416c-9acc-01318f8de329)
 
-Tampilan Dashboard Admin (student)
-![tampilan pertama](laporan/3_create_student.png)
+## Tampilan Dashboard Student
+![evoku-12](https://github.com/pearlgw/kripto/assets/113248009/34c5aab7-549d-4141-bd3e-c7c93221f03d)
 
-Tampilan Dashboard Admin (student)
-![tampilan pertama](laporan/4_show_student.png)
+## Tampilan Setelah Melakukan Vote (Tampilan Dashboard Student)
 
-Tampilan Dashboard Admin (student)
-![tampilan pertama](laporan/5_edit_student.png)
+## Tampilan Dashboard Student
+![evoku-13](https://github.com/pearlgw/kripto/assets/113248009/8256c833-6ab2-472d-8aa8-e6f22e0aa0f1)
 
-Tampilan Dashboard Admin (candidate)
-![tampilan pertama](laporan/6_data_candidate_admin.png)
+## Tampilan Dashboard Student - hasil vote
+![evoku-14](https://github.com/pearlgw/kripto/assets/113248009/f7be4a7f-0b27-4b34-a6de-b80312a62d12)
 
-Tampilan Dashboard Admin (candidate)
-![tampilan pertama](laporan/8_show_candidate.png)
+## Setelah Melakukan Pengecekan Integrasi Yang Di Kirim Dari Email( Tampilan Dashboard Student)
+![evoku-15](https://github.com/pearlgw/kripto/assets/113248009/726c13bc-0a59-4db0-b5fd-ffa637873e7a)
 
-Tampilan Dashboard Admin (candidate)
-![tampilan pertama](laporan/9_edit_candidate.png)
+## Tampilan Dashboard Admin
+![evoku-2](https://github.com/pearlgw/kripto/assets/113248009/f8ab3f7b-9b6e-4f55-a601-05b52c9cabea)
 
-Tampilan Dashboard Student
-![tampilan pertama](laporan/10_dashboard_student.png)
+## Tampilan Dashboard Admin (student)
+![evoku-3](https://github.com/pearlgw/kripto/assets/113248009/7a37f866-2d06-4749-84c4-f7aee5c9a6a7)
 
-Tampilan Dashboard Student
-![tampilan pertama](laporan/11_dashboard_student.png)
+## Tampilan Dashboard Admin (student) - create
+![evoku-4](https://github.com/pearlgw/kripto/assets/113248009/dcc6337b-e82e-4113-b5df-35e1a2f47f3c)
 
-Tampilan Dashboard Student
-![tampilan pertama](laporan/12_detail_candidate_student.png)
+## Tampilan Dashboard Admin (student) - detail mahasiswa
+![evoku-5](https://github.com/pearlgw/kripto/assets/113248009/598e0222-d821-4265-a4c1-5a8502d359e6)
 
-Tampilan Setelah Melakukan Vote (Tampilan Dashboard Student)
-![tampilan pertama](laporan/13_page_after_vote.png)
+## Tampilan Dashboard Admin (student) - edit mahasiswa
+![evoku-6](https://github.com/pearlgw/kripto/assets/113248009/d75cad31-ba00-4a8e-abe9-adcffd65ec57)
 
-Tampilan Dashboard Student
-![tampilan pertama](laporan/14_cek_integrasi.png)
+## Tampilan Dashboard Admin (candidate)
+![evoku-7](https://github.com/pearlgw/kripto/assets/113248009/5bef4b6b-7494-4a3b-8e51-e3ae9b9618da)
 
-Setelah Melakukan Pengecekan Integrasi Yang Di Kirim Dari Email( Tampilan Dashboard Student)
-![tampilan pertama](laporan/15_sertifikat.png)
+## Tampilan Dashboard Admin (candidate) - detail kandidat
+![evoku-8](https://github.com/pearlgw/kripto/assets/113248009/65f4b5ae-24bd-4ce1-a397-9cc4f2a1e937)
 
+## Tampilan Dashboard Admin (candidate) - edit kandidat
+![evoku-9](https://github.com/pearlgw/kripto/assets/113248009/eed8f550-bee2-4145-bb7b-cdd4f5f1872d)
